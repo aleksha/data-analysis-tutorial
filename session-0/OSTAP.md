@@ -6,8 +6,7 @@ Precursors:
 
 Download the project, go to **stat** directory, start _Ostap_:
 ```bash
-git clone https://github.com/aleksha/PNPI-PhD.git
-cd PNPI-PhD/stat/
+git clone https://github.com/aleksha/data-analysis-tutorial.git
 ostap
 ```
 
