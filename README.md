@@ -62,5 +62,3 @@ Practice is organized as a bunch o sessions followed by homeworks. At the end of
  * **Git** to store code.
  * **Markdown**  way to style text on the web.
  * **LaTeX** to prepare report.
-
-For details of instalation see **_man/_** in the root of repository.
