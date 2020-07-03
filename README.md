@@ -19,7 +19,7 @@ Practice is organized as a bunch o sessions followed by homeworks. At the end of
     * **Markdown** - a plain text formatting syntax.
     * **Introdution to statistics** - some basics we need to start coding.
       - Measurements and uncertainties;
-      - Probability distribution functions and their basic pproperties;
+      - Probability distribution functions and their basic properties;
       - Three special distributions:
         - Binomial
         - Poisson
@@ -44,6 +44,7 @@ Practice is organized as a bunch o sessions followed by homeworks. At the end of
       - Look elswhere effect
       - When to use signal for background rejection optimisations?
   * **Session 3:** Simple classification methods
+    * Statistical classification
     * Support vector machine
     * k-nearest
   * **Session 4:** Multivariate analysis with ROOT.TMVA package 
