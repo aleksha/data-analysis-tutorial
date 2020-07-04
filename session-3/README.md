@@ -57,3 +57,10 @@ by a clear gap that is as wide as possible. More formally, a support-vector
 machine constructs a hyperplane or set of hyperplanes in a high- or 
 infinite-dimensional space, which can be used for classification, as well as 
 for regression, or other tasks like outliers detection.
+
+## Homework
+
+### Tasks
+  1. 
+
+### Expected outcome
