@@ -1,6 +1,5 @@
-# Regression problem
-    * Some theory
-    * Least square and Maximum Likelihood methods
-    * Using TMVA to solve regression problem (kNN, BTD, NN).
-  
-## Theory
+#  Fourier transformation
+  * Example with shape detection
+  * Example with voice recognition
+  * Why Fourier transform is needed in physics
+  * Using __scipy__ for FFT
