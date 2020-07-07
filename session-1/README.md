@@ -11,19 +11,33 @@
     - Fit-in-bin technique;
     - __sPlot__ unfolding techinque.
 
-## A typical task
+## A typical task (English vocabular)
 
 Let's assume that we have a detector, which (somehow) detect a charged product of a decay of a particle (**X**),
 which appears in some collision experiment. There is a certain probability that **N** events appear during
 data taking:
-```math
-N = \frac{\sigma}{L\timesB\times\varepsilon},
-```
+
+**N = σ / (L B ε)**,
+
 where enumerator contains [cross-section](https://en.wikipedia.org/wiki/Cross_section_(physics)) 
-of the X production, and the denominator contains: integrated 
+of the X production (**σ**), and the denominator contains: integrated 
 [luminosity](https://en.wikipedia.org/wiki/Luminosity_(scattering_theory)) 
 (**L**), probebility of the X to decay into a selected final state (**B**) and overall 
-efficiency of the detection.
+efficiency of the detection (**ε**). Note, that **N** is a Poisson-distributed random value.
+
+In practice, there are background events in addition to signal ones. 
+The task is to make an estimation (**S**) of **N**. 
+Differnt estimators (means different rules for calculating an estimate 
+of a given quantity based on observed data) are posiible.
+The attractiveness of different estimators can be judged by looking at 
+their properties, such as: u
+  * [nbiasedness](https://en.wikipedia.org/wiki/Unbiasedness)
+  * [mean square error](https://en.wikipedia.org/wiki/Mean_square_error)
+  * [consistency](https://en.wikipedia.org/wiki/Consistent_estimator)
+  * [asymptotic distribution](https://en.wikipedia.org/wiki/Asymptotic_distribution)
+  * [efficiency](https://en.wikipedia.org/wiki/Efficiency_(statistics))
+  * [robustness](https://en.wikipedia.org/wiki/Robust_statistics)
+  * etc
 
 
 ## Fitting
