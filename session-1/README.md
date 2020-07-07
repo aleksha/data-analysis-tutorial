@@ -11,7 +11,7 @@
     - Fit-in-bin technique;
     - __sPlot__ unfolding techinque.
 
-## A typical task (English vocabular)
+## A typical task
 
 Let's assume that we have a detector, which (somehow) detect a charged product of a decay of a particle (**X**),
 which appears in some collision experiment. There is a certain probability that **N** events appear during
@@ -30,8 +30,8 @@ The task is to make an estimation (**S**) of **N**.
 Differnt estimators (means different rules for calculating an estimate 
 of a given quantity based on observed data) are posiible.
 The attractiveness of different estimators can be judged by looking at 
-their properties, such as: u
-  * [nbiasedness](https://en.wikipedia.org/wiki/Unbiasedness)
+their properties, such as:
+  * [unbiasedness](https://en.wikipedia.org/wiki/Unbiasedness)
   * [mean square error](https://en.wikipedia.org/wiki/Mean_square_error)
   * [consistency](https://en.wikipedia.org/wiki/Consistent_estimator)
   * [asymptotic distribution](https://en.wikipedia.org/wiki/Asymptotic_distribution)
@@ -39,6 +39,70 @@ their properties, such as: u
   * [robustness](https://en.wikipedia.org/wiki/Robust_statistics)
   * etc
 
+One of the problems is that **S** is not the only parameter. Other so-called 
+[nuisance parameters](https://en.wikipedia.org/wiki/Nuisance_parameter) 
+(peak position, peak width, background model parameters) should be estimated simultaniously 
+with **S**.
+
+There are a lot of different estimators and esimator types:
+  * Maximum likelihood estimators (MLE)
+  * Least squares
+  * Bayes estimators
+  * Method of moments estimators
+  * Cramér–Rao bound
+  * Minimum mean squared error (MMSE), also known as Bayes least squared error (BLSE)
+  * Maximum a posteriori (MAP)
+  * Minimum variance unbiased estimator (MVUE)
+  * Nonlinear system identification
+  * Best linear unbiased estimator (BLUE)
+  * Unbiased estimators — see estimator bias.
+  * Particle filter
+  * Markov chain Monte Carlo (MCMC)
+  * Kalman filter, and its various derivatives
+  * Wiener filter
+
+In our practice we will mainly use Maximum likelihood estimators.
+
+## Maximum likelihood method
+
+Maximum likelihood estimation (MLE) is a method of estimating the parameters of a probability 
+distribution by maximizing a **likelihood function**, so that under the assumed statistical 
+model the observed data is most probable. The point in the parameter space that maximizes 
+the likelihood function is called the maximum likelihood estimate.
+
+Likelihood function (**L**), for a given model, which is discribed by a probablity
+density function (**p**) depoending on a parameter (**theta**), and data point (**x**)
+is defined as:
+  
+  **L(theta|x) = p(X=x|theta)**
+
+For several data points an overall likelihood is a porduct of individual.
+
+Log-likelihood function is a logarithmic transformation of the likelihood function.
+Because logarithms are strictly increasing functions, maximizing the likelihood 
+is equivalent to maximizing the log-likelihood. As a logrithm of a product is 
+a sum of logarithm calculations become easy. For a large number of data points
+likelihood is a very small number, and it's logarythm is easy to handle.
+
+As the sample size increases to infinity, sequences of maximum 
+likelihood estimators have next properties:
+  * consistency: the sequence of MLEs converges in probability to the value being estimated;
+  * functional invariance: if **T** is MLE for a parameter **t**, and **g(t)** is a tranformation,
+     then MLE for **a=g(t)** is **g(T)**;
+  * efficiency: no consistent estimator has lower asymptotic mean squared error than the MLE;
+  * asymptotic normality;
+  * second-order efficiency after correction for bias: meaning that it has minimal 
+     mean squared error among all second-order bias-corrected estimators.
+
+Maximum-likelihood estimation is justified by a so-called 
+[Wilks' theorem](https://en.wikipedia.org/wiki/Wilks%27_theorem).
+The problem is that statistical tests (a parameter estimation can be considered as a finding 
+of a best hypothesis / model to discribe observed data) generally require knowledge 
+of the probability distribution of the test statistic. This is often a problem for likelihood method, 
+where the probability distribution can be very difficult to determine.
+states says that  for infinite sample size, the distribution of the test statistic 
+**−2log⁡(Λ)**  asymptotically approaches the chi-squared distribution under the null 
+hypothesis. Here, **Λ** denotes the likelihood ratio.
 
 ## Fitting
 
