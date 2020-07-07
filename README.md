@@ -7,6 +7,7 @@ Practice is organized as a bunch o sessions followed by homeworks. At the end of
 ## Precursors
 * **PNPI PhD course of statistics and data analysis** mainly to have a proper vocabular.
 * **Python programming language**. Here are some documentation, tutorials as well as a couple of courses (in Russian):
+  - Dive into Python3 https://diveintopython3.problemsolving.io/table-of-contents.html ;
   - Python documantation and tutorals https://docs.python.org/3/ ; 
   - More tutorials https://pythonprogramming.net/ ;
   - Applied Python (in Russian): htthttps://www.youtube.com/watch?v=oLN3-1UX0-A&list=PLrCZzMib1e9qM62lMXC90SiFy7-1-kAPJ&index=1ps://www.youtube.com/watch?v=oLN3-1UX0-A&list=PLrCZzMib1e9qM62lMXC90SiFy7-1-kAPJ&index=1 ;

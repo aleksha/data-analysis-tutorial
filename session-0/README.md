@@ -82,6 +82,7 @@ Let's follow an introduction lecture by [Prof. Mark Thompson](https://www.hep.ph
 
 ## Python3
 
+### Basic statistics with Python3
 In python3 a basic statistics is impemented into a standard library as a special module, which  provides functions for calculating statistics of data, including averages, variance, and standard deviation.
 
 ```python
@@ -89,6 +90,7 @@ import statistics as stat
 help(stat) # press q to exit back into command line
 ```
 
+### Advanced statistics
 More functionality is provided by special module entering [scipy](https://docs.scipy.org/doc/scipy/reference/) open-source software for mathematics, science, and engineering. Here is a tutorial on **scipy.stats**:
   * https://docs.scipy.org/doc/scipy/reference/tutorial/stats.html
 
