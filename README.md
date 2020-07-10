@@ -38,7 +38,10 @@ Practice is organized as a bunch o sessions followed by homeworks. At the end of
       - Sideband subtruction;
       - Fit-in-bin technique;
       - _sPlot_ unfolding techinque.
-  * **Session 2:** Cut-based techique.
+  * **Session 2:** More on fitting + cut-based techique.
+    * How good is your fit?
+      - Pull distributions;
+      - Toys to obtain likelihood distributions;
     * How to find best requirements?
     * Are requirements optimal?
       - Fluctuations
