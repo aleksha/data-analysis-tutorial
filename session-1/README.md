@@ -144,6 +144,40 @@ part of [Review of Particle Physics](http://pdg.lbl.gov/2018/reviews/rpp2018-rev
 
 ## Fitting in Ostap
 
+Here we follow an [official tutorial](https://lhcb.github.io/ostap-tutorials/).
+
+### Avalable pre-defined models
+
+List below isn't exhausive (take a look into Ostape source code for the updates):
+ * [Signal](https://lhcb.github.io/ostap-tutorials/fitting/signals.html)
+ * [Background](https://lhcb.github.io/ostap-tutorials/fitting/backgrounds.html)
+ * [Other](https://lhcb.github.io/ostap-tutorials/fitting/others.html)
+ * [2D](https://lhcb.github.io/ostap-tutorials/fitting/2d.html)
+ * [3D](https://lhcb.github.io/ostap-tutorials/fitting/3d.html)
+
+
+### Fit result
+The class **RooFitResult** get many decorations that allow to access fit results.
+Also the simple math with fiting parameters is supported.
+```python
+result = ...
+par1 = result.params()  ## get all floating parameters 
+par2 = result.params( float_only = False ) ## all parameters 
+a,v  = result.param ( 'a' )      ## par by name 
+a,v  = result.param (  a  )      ## par by RooFit object itself 
+p    = result.a                 ## par as attribute 
+for par in result :   print par                ## iteration 
+for name,par in result.iteritems() : print par ## iteration
+print result.cov  ( 'a' , 'b' )   ## get the covariance submatrix  
+print result.corr ( 'a' , 'b'  )  ## get the correlation coefficient
+s = result.sum       ('S','B' ) ## S+B
+d = result.divide    ('S','B' ) ## S/B
+s = result.subtract  ('B','B1') ## B-B1
+m = result.multiply  ('A','B' ) ## A*B 
+f = result.fraction  ('S','B' ) ## S/(S+B)
+```
+
+
 ## Validation of uncertainties
 
 Here we follow [Kerim Guseynov's tutorial](https://indico.cern.ch/event/902801/)
