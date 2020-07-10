@@ -3,6 +3,7 @@
     - Pull distributions;
     - Toys to obtain likelihood distributions;
   * How to find best requirements?
+  * Significance
   * Are requirements optimal?
     - Fluctuations
     - Look elswhere effect
@@ -12,7 +13,10 @@
 
 ### Nice pull plots
 
-An example of the function, which draw nice plots.
+For large number of events it's good to produce a pull-plots, deviation 
+(in **sqrt(n)**for **n** events in bin) for each bin.  This plot should
+not contain so-called wiggles ofintervalse of large deviation. An example 
+of f function, which draw nice plots:
 
 ```python
 def draw_param(r_fit, w_fit, h_fit, N_BINS, var, W_max, name, XTitle, Prefix, Type, var_Units):
@@ -116,6 +120,44 @@ It could be generated using toys:
  - they are re-fitted with the model (at each re-fit a likelihood is computed)
  - compare observed value of likelihood (from main fit) with obtained distribution
   (same ideology as for the chi2 case).
+
+## Significance
+
+A result has **statistical significance** when it is very unlikely to have occurred 
+given the null (background only) hypothesis.
+
+Let's follow [slides of Pietro Vischia](https://indico.cern.ch/event/648004/contributions/3032092/attachments/1696821/2731727/2018-08-01_pseudosignificancesAtQCHSXIII_vischia.pdf).
+
+## Traps
+
+### Fluctuations or something else
+
+If you see in your data some unexpected features, think a bit:
+ * if it's smaller than your resolution but significant, when 
+  something probably gows wrong
+ * are the any peaking backgrounds / contributions?
+   - miss identified tracks
+   - clones (my favorite Theta+ signal out of K0S-->pi+pi- reqion with clonned pi+ as proton track )
+   - different sources of signal (Sigma_c--> Lambda_c pi spectrum at LHCb has clearly visible 
+     Lambda_c(2595)-->Sigma_c pi contribution due to limited phase space)
+   - feed-downs (see Omega_c* analysis)
+   - cusps at the threshold of coupled channel ( K+K- <--> K0K0bar)
+   - ...
+ * just statistical fluctuation?
+
+### Look-elsewhere effect
+
+The look-elsewhere effect is a phenomenon in the statistical analysis of scientific experiments 
+where an apparently statistically significant observation may have actually arisen by chance because 
+of the sheer size of the parameter space to be searched.
+
+The problem is in how to define "elsewhere".
+
+Usually experimentalists quotes a local and a global significane for the search region.
+Latest accounts the probability to have a fluctuation with a local significance for the spectum of interest.
+
+Toy Monte-Carlo ubde background only assumption later fitted with the full model
+is usually used to find this probability.
 
 ## Homework
 
