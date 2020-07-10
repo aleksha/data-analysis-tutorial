@@ -106,16 +106,45 @@ hypothesis. Here, **Λ** denotes the likelihood ratio: **Λ(t,tbest|x) = L(t|x)/
 If **tbest** is a best parameter, then **Λ** shows how far one can move on **t**-scale
 to be consistent with data (**x**).
 
-## How MLE works
+### How MLE works
 
 Let's consider a simple example in order to understand how MLE works.
 We will have a 10 measurements of normal distributed quantity with known mean value
 equal to zero and unknown (but fixed) width parameter. The goal will be to make an
 estimation of sigma.
 
+```bash
+ostap -b mle_by_hand.py
+```
+
+## Chi-squared method
+
+For the case of the large **N**, when the data can be grouped in bins with
+the binning which covers enogh all features of shapes for a signal and a
+background distributions, a method of the chi-squared minimization could
+be used to obtain parameters of distributions.
+
+The idea of the method is that number of the event in each group (bin)
+follows overall pdf and at the same time follows Poisson statistics.
+As we already mentioned in the limit of large numbers Poisson statistics 
+aproachs Gaussian distribution. The variance of the Poisson random variable 
+is the rendom variable (standard deviation is a square root of it).
+So for each set of parameters discribing overall pdf for each bin a
+diviation in values of standard dediations can be calculated.
+A sum of **n** normally distributed independent random values follows
+well known **chi-squared distribution with (n-1) degrees of freedom**.
+
+See more about [chi-squared distribution](https://en.wikipedia.org/wiki/Chi-square_distribution).
+
+The fitting method is to find a minimum of chi2 in the parameter space.
+
+Chi-squared method allows to calculated a confidense interval for
+parametes from the change of a chi2. See, for example, a statistics 
+part of [Review of Particle Physics](http://pdg.lbl.gov/2018/reviews/rpp2018-rev-statistics.pdf).
+
 ## Fitting
 
-## Validation of ncertainties
+## Validation of uncertainties
 
 Here we follow Kerim Guseynov's tutorial.
 
