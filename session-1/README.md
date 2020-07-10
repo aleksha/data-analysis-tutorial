@@ -142,11 +142,12 @@ Chi-squared method allows to calculated a confidense interval for
 parametes from the change of a chi2. See, for example, a statistics 
 part of [Review of Particle Physics](http://pdg.lbl.gov/2018/reviews/rpp2018-rev-statistics.pdf).
 
-## Fitting
+## Fitting in Ostap
 
 ## Validation of uncertainties
 
-Here we follow Kerim Guseynov's tutorial.
+Here we follow [Kerim Guseynov's tutorial](https://indico.cern.ch/event/902801/)
+(access could be restricted).
 
 The result of a fit is ** parameter = value± +/- stat.err**.
 
@@ -193,13 +194,57 @@ SE.mean();
 SE.rms()
 ```
 
-
 **Important:** take care about initial random number generator seedidng.
 For example (correct but reproducability of a result will impossible):
 ```python
 import time
 int_num = int(time.time())
 ROOT.RooRandom.randomGenerator().SetSeed(int_num)
+```
+
+## Signal distribution
+
+### Sideband subtruction
+
+This method exploit an aproach that shape of a bagrouund events under a signal peak
+is the same as outside a peak. One can subtrack the distribution from the distribution
+for the events in the preak region.
+
+Usually **+/-2sigma** around a peak position is used for the signal region and 
+**(-7,-5)sigma** and **(5,7)-sigma*** intervals are used for subtruction.
+
+**Important**:
+  - Take care about proper normalisation;
+  - Background distribution should be quite flat.
+
+### Fit-in-bin
+
+One can split a data into subsamples on a control variable and perform a MLE in each bin.
+This method is quite CPU consuming.
+
+
+### sPlot techinqie
+
+Here, idea is quite simple. Each event in MLE fitting has certain contribution to the
+signal and background part of likelihood function. One can calculate a statistical
+weight for each event with rearkble properties, which allow to use them to detrmine
+distribution of a control variable.
+
+**Important:** control variables have to be independent on a discriminating variable(s)!
+
+Useful links:
+ * [Official paper](https://www.sciencedirect.com/science/article/pii/S0168900205018024?via%3Dihub)
+ * [Arxiv version](https://arxiv.org/abs/physics/0402083)
+ * [Alex Rogozhnikov's explanation](http://arogozhnikov.github.io/2015/10/07/splot.html)
+
+Using __sPlot__ is rather trivial in Ostap:
+```python
+dataset = ...
+model   = Fit1D ( signal = ... , backgrund = ... ) 
+model.fitTo ( dataset )
+print datatset   
+model.sPlot ( dataset )  ## <--- HERE 
+print datatset           ## <--- note appearence of new variables
 ```
 
 ## Homework
