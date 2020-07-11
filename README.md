@@ -1,8 +1,6 @@
 # Practice course
 
-<div style="text-align: right"> 
-__“Probieren geht über studieren” (Trying beats studying).__
-</div>
+**__“Probieren geht über studieren” (Trying beats studying).__**
 
 This of repository contains documentation and code, which are needed for a practice in a Laboratory of baryonic physics of High energy physics department of PNPI.
 
@@ -59,6 +57,7 @@ Practice is organized as a bunch o sessions followed by homeworks. At the end of
     * Boosting Decision Trees
     * Neural Networks.
   * **Session 5:** Dealing with Monte-Carlo
+    * Random number generators in ROOT
     * How to re-weight MC to data?
     * Weighted fit for efficiency evaluation.
     * How to estimate efficiency for not-well reconstructed events?
