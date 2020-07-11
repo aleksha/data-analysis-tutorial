@@ -1,6 +1,10 @@
 # Practice course
 
-This part of repository contains documentation and code, which are needed for a practice in a Laboratory of baryonic physics of High energy physics department of PNPI.
+<div style="text-align: right"> 
+__“Probieren geht über studieren” (Trying beats studying).__
+</div>
+
+This of repository contains documentation and code, which are needed for a practice in a Laboratory of baryonic physics of High energy physics department of PNPI.
 
 Practice is organized as a bunch o sessions followed by homeworks. At the end of the practice student reports are expected.
 
