@@ -21,27 +21,29 @@ More delatils in Bohm and Zech book.
 
 ## Weighted events 
 
-Bohm and Zech discussed (page 61) some statistical properties of weighted events and
-realized that the relative statistical error of a sum of N weighted events can be much
-larger than the Poisson value 1/√N, especially when the individual weights are very
-different. Thus we will usually refrain from weighting. However, there are situations
-where it is not only convenient but essential to work with weighted events. If a large
-sample of events has already been generated and stored and the p.d.f. has to be
-changed afterwards, it is of course much more economical to re-weight the stored
-events than to generate new ones because the simulation of high energy reactions
-in highly complex detectors is quite expensive. Furthermore, for small changes the
-weights are close to one and will not much increase the errors. As we will see later,
-parameter inference based on a comparison of data with a Monte Carlo simulation
-usually requires re-weighting anyway.
+We also quote here Bohm and Zech (page 120):
 
-An event with weight **w** stands for **w** identical events with weight 1. 
-When interpreting the results of a simulation, i.e. calculating errors, 
-one has to take into account the distribution of a sum of weights:
+> We discussed (page 61) some statistical properties of weighted events and
+> realized that the relative statistical error of a sum of N weighted events can be much
+> larger than the Poisson value 1/√N, especially when the individual weights are very
+> different. Thus we will usually refrain from weighting. However, there are situations
+> where it is not only convenient but essential to work with weighted events. If a large
+> sample of events has already been generated and stored and the p.d.f. has to be
+> changed afterwards, it is of course much more economical to re-weight the stored
+> events than to generate new ones because the simulation of high energy reactions
+> in highly complex detectors is quite expensive. Furthermore, for small changes the
+> weights are close to one and will not much increase the errors. As we will see later,
+> parameter inference based on a comparison of data with a Monte Carlo simulation
+> usually requires re-weighting anyway.
+>
+> An event with weight **w** stands for **w** identical events with weight 1. 
+> When interpreting the results of a simulation, i.e. calculating errors, 
+> one has to take into account the distribution of a sum of weights:
 
 **var(sum(w_i)) = sum(w_i^2)**
 
-Strongly varying weights lead to large statistical fluctuations and 
-should therefore be avoided.
+> Strongly varying weights lead to large statistical fluctuations and 
+> should therefore be avoided.
 
 
 ## Homework
