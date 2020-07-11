@@ -9,7 +9,7 @@
     - Look elswhere effect
     - When to use signal for background rejection optimisations?
 
-## Goodess-of-fit
+## Goodness-of-fit
 
 ### Nice pull plots
 
@@ -128,6 +128,10 @@ given the null (background only) hypothesis.
 
 Let's follow [slides of Pietro Vischia](https://indico.cern.ch/event/648004/contributions/3032092/attachments/1696821/2731727/2018-08-01_pseudosignificancesAtQCHSXIII_vischia.pdf).
 
+One have to quote what he means by significance.
+
+Better to se Punzi figure of merit to find an optimal backgroud suppession.
+
 ## Traps
 
 ### Fluctuations or something else
@@ -158,6 +162,18 @@ Latest accounts the probability to have a fluctuation with a local significance 
 
 Toy Monte-Carlo ubde background only assumption later fitted with the full model
 is usually used to find this probability.
+
+## When to use signal for background rejection optimisations?
+
+Soon, we'll meet a problem of classification for the background suppression.
+
+A typical workflow is to use asimulated signal sample and sidebands as a 
+background proxy to build a classifier.
+
+Results of the __sPlot__ techiques can be used as a signal proxy, but
+only when signal is known and clearly visible and all its features is undersood. 
+One should always remember that the statistical fluctuations will affect such
+studies.
 
 ## Homework
 
