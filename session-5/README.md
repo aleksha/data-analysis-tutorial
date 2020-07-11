@@ -19,6 +19,20 @@ Two aspects to keep in mind:
 
 More delatils in Bohm and Zech book.
 
+## Efficency evalueation
+
+Efficency is the a ratio of numbers for **accepted** and **generated events**.
+However, these are not statistically independent samples.
+The right way is to use independent samples of **accepted** and **rejected events**.
+```python
+h_eff = 1. / (1. + h_rej / h_acc)
+```
+
+Note, that uncertainty for 0 events is +-1.
+
+These idea can be also used for two factors analysis. See **two_factors.pdf**.
+
+
 ## Weighted events 
 
 We also quote here Bohm and Zech (page 120):
@@ -44,6 +58,66 @@ We also quote here Bohm and Zech (page 120):
 
 > Strongly varying weights lead to large statistical fluctuations and 
 > should therefore be avoided.
+
+## Re-weighting with Ostap
+
+Here, we follow [official tutorial](https://lhcb.github.io/ostap-tutorials/tools/reweighting.html).
+
+## Weighted fit for efficiency evaluation
+
+Sometimes multidimensional efficency map is provided not by a simulation, 
+but from the data itself (for example, from calibration sample). Nest
+weighted fit procedure can be used to evaluate an efficency:
+```python
+h_eff  = TH2F(... # efficency map on x and y variables
+
+mass   = ROOT.RooRealVar('mass','disctiminating var', ...  )
+x      = ROOT.RooRealVar('x','x var', ...  )
+y      = ROOT.RooRealVar('y','y var', ...  )
+weight = ROOT.RooRealVar( ... )
+varset = ROOT.RooArgSet ( mass, x, y,  weight )
+
+dataset_with_weights = ROOT.RooDataSet ( 'dataset_with_weights' , 'temp dataset' , varset )
+for event in dateset_original:
+    w = (1. / h_eff(event["x"], event["y"]) ).value() # histo as function
+    mass.setVal( evemt["mass"] )
+    weight.setVal( w)
+    dataset_with_weights.add( varset )
+
+dataset_weighted = dataset_with_weights.makeWeighted( "weight" )
+result_w = model.fitTo( dataset_weighetd, ... )
+result_o = model.fitTo( dataset_original, ... )
+```
+
+Use original-to-weighted ratio as an efficency for dataset.
+
+### Related systematics
+
+Note, that the results of the weighted and non-weighted fits are correlated.
+To distinguish uncertainties related to a finite size of a calibration sample
+a sampling-based toy Monte-Carlo procedure can be used:
+  1. Sample an efficiency histogram a lot of times.
+  2. Perform weighted fit procedure using these sampled histograms.
+  3. Evaluate mean and the standard deviation of the result.
+Mean value should be in agreement with the nominal one.
+Standard deviation can be interpreted as a corresponding systematics.
+
+There is an easy way to sample the histograms according to their content, 
+e.g. for toy-experiments: 
+```python
+h_new = h_original.sample()
+H_new_posivive = h_original.sample( accept = lambda s : s > 0 )
+```
+Better to use second way with the requirement that sampled values are positive
+
+### Important issues
+  * Check that the correlated requrements are the same in the efficency evaluation
+  * Calculate the uncertainty for extarapolation (events placed outside of the
+      efficiency map) by comparing different extrapolation techniques.
+      At least constatnt and linear.
+
+
+## Efficiency for not-well reconstructed events?
 
 
 ## Homework
