@@ -14,6 +14,13 @@ It's quite a bad term, as can be confused with a
 [regression toward the mean](https://en.wikipedia.org/wiki/Regression_toward_the_mean),
 a "result" of the first paper about regression analysis by John Galton.
 
+We did alredy regression, when were construction classification variables.
+
+As physicsts we have try to avoid pure regression and try to understand 
+underlying nature of phenomena (see cow example below). But sometimes,
+it's hard to avoid it --- we  have some data and need to evaluate best 
+value of other variable out of it. Plus, someone can gives up and go
+to a finance sector, where they care only about money...
 
 ## Assumptions
 By itself, a regression is simply a calculation using the data. In order to interpret the output 
