@@ -117,8 +117,15 @@ Better to use second way with the requirement that sampled values are positive
       At least constatnt and linear.
 
 
-## Efficiency for not-well reconstructed events?
+## Efficiency and not-well reconstructed events
 
+Even truth-matched (detector hits a done by a generated particle / decay products
+of interest) events can be not well reconstructed. It's good to perform a fit with 
+the full (S+B)-model for them to get a fraction of thruth-matched events.
+
+One can also can conside a fit of the data-like mixture of simulated events
+and background events generated according a model obtained from a fit of
+real data. This give mre precise correction factor.
 
 ## Homework
 
