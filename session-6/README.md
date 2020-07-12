@@ -49,5 +49,7 @@ Least square liniear regressions are sensitive to the outliers.
 ### Typical mistakes
 
   * Non-homoscedasticity (American TV example)
-  * Correlated predictors
+  * Strondly correlated predictors (height and foot length example)
   * Non-adecvate model (cow example)
+  * Parameter correlated with another "hidden" paramtters 
+     (clouds and enemy palane number on successfull bombing)
