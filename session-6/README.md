@@ -36,6 +36,10 @@ researchers often rely on a number of classical assumptions. These often include
 
 ## Least square
 
+### SciPy
+ * [Solve a linear least-squares problem with bounds on the variables.](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.lsq_linear.html)
+ * [Solve a nonlinear least-squares problem with bounds on the variables.](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html)
+
 1st component of PCA and linear regresion is a bit different but quite close concepts.
 For the 2D case **x** and **y** are equally important, so the total length perpendicular
 to a line is minimised. Instead, for the least square method the lines are parallel
