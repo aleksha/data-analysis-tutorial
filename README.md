@@ -61,10 +61,10 @@ Practice is organized as a bunch o sessions followed by homeworks. At the end of
     * How to re-weight MC to data?
     * Weighted fit for efficiency evaluation.
     * How to estimate efficiency for not-well reconstructed events?
-  * **Session 6:** Addons: Regression problem / Fourier transformation
+  * **Session 6:** Regression problem / Fourier transformation
     * Why Fourier transform is needed?
     * Using __scipy__ for FFT
-    * Whais is regression?
+    * What is is regression?
     * Least square and Maximum Likelihood methods
     * Using TMVA to solve regression problem (kNN, BTD, NN).
 ## Software stack

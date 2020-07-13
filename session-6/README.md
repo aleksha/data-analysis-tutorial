@@ -1,9 +1,25 @@
-# Regression problem
-    * Some theory
+# Fourier transformation / Regression
+    * Why Fourier transform is needed?
+    * Using __scipy__ for FFT
+    * What is is regression?
     * Least square and Maximum Likelihood methods
     * Using TMVA to solve regression problem (kNN, BTD, NN).
-  
-## Theory
+
+## Fourier transform
+
+In mathematics, a Fourier transform (FT) is a mathematical transform that decomposes a function (often a function of time, or a signal) into its constituent frequencies, such as the expression of a musical chord in terms of the volumes and frequencies of its constituent notes. The term Fourier transform refers to both the frequency domain representation and the mathematical operation that associates the frequency domain representation to a function of time. 
+
+We met it alreadu in a Introduction to N&HEP course, when discussing electron scattering on nuclei and particles, where a space distribution of charge define features of the electron scattering cross section. See Povh·Rith·Scholz·Zetsche's "Particles and Nuclei" (page 62 and futher).
+
+An algorithm of **fast Fourier transform (FFT)** computes the discrete Fourier transform (DFT) of a sequence, or its inverse (IDFT), converting a signal from its original domain (often time or space) to a representation in the frequency domain and vice versa. For data-analysis FFT is a filtering algorithms allowing to understand a noise composition and reduce it.
+
+### Example of using SciPy for FFT for the TPC noise generation
+Time-Projection Chamber (TPC) signal is discussed in a[MS Word file](https://github.com/aleksha/electronic-noise/blob/master/docs/MC4NOISE.docx). Fourier analysis is used to obtain features of the electronic noise of the TPC.
+
+Analysis is done using **fft** pack in SciPy:
+  * https://docs.scipy.org/doc/scipy/reference/generated/scipy.fftpack.fft.html#scipy.fftpack.fft
+
+## Regression analysis
 
 In statistical modeling, **regression analysis** is a set of statistical processes 
 for estimating the relationships between a dependent variable (often called 
