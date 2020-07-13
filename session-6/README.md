@@ -14,7 +14,7 @@ We met it alreadu in a Introduction to N&HEP course, when discussing electron sc
 An algorithm of **fast Fourier transform (FFT)** computes the discrete Fourier transform (DFT) of a sequence, or its inverse (IDFT), converting a signal from its original domain (often time or space) to a representation in the frequency domain and vice versa. For data-analysis FFT is a filtering algorithms allowing to understand a noise composition and reduce it.
 
 ### Example of using SciPy for FFT for the TPC noise generation
-Time-Projection Chamber (TPC) signal is discussed in a[MS Word file](https://github.com/aleksha/electronic-noise/blob/master/docs/MC4NOISE.docx). Fourier analysis is used to obtain features of the electronic noise of the TPC.
+Time-Projection Chamber (TPC) signal is discussed in a [MS Word document](https://github.com/aleksha/electronic-noise/blob/master/docs/MC4NOISE.docx). Fourier analysis is used to obtain features of the electronic noise of the TPC.
 
 Analysis is done using **fft** pack in SciPy:
   * https://docs.scipy.org/doc/scipy/reference/generated/scipy.fftpack.fft.html#scipy.fftpack.fft
