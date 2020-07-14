@@ -130,7 +130,26 @@ Let's follow [slides of Pietro Vischia](https://indico.cern.ch/event/648004/cont
 
 One have to quote what he means by significance.
 
-Better to se Punzi figure of merit to find an optimal backgroud suppession.
+### Figire-of-merit in Ostap
+
+If figure-of-merit is natural and equals to **sigma(S)/S** (note that it is equal to **sqrt(S+B)/S**):
+Note that no explicit knowledge of background is needed here - it enters indireclty via the 
+uncertainties in signal determination.
+```python
+signal = ...  ## distribition for signal
+fom1   = signal.FoM2 () ## FoM for var<x cut 
+fom2   = signal.FoM2 ( False ) ## FoM for var>x cut
+```
+
+If figure-of-merit is defined as **S/sqrt(S+alpha*B)**:
+```python
+signal = ... 
+background = ... 
+alpha = ... 
+fom1  = signal.FoM1 ( background , alpha ) ## FoM for var<x cut 
+fom2  = signal.FoM1  ( background , alpha , False ) ## FoM for var>x cut
+```
+
 
 ## Traps
 
