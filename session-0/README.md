@@ -123,6 +123,16 @@ In our practice we use a three ([matryoshka](https://en.wikipedia.org/wiki/Matry
     - powerful, pickle-based persistency for object;
     - interactive **ostap** analysis environment (which will be a default one for the practice).
 
+### Introduction to Ostap
+We'll follow [original tutorial](https://lhcb.github.io/ostap-tutorials/).
+
+  * [Getting started](https://lhcb.github.io/ostap-tutorials/getting-started/)
+  * [Values with uncertanties](https://lhcb.github.io/ostap-tutorials/getting-started/VE.html)
+  * [Simple operations with histograms](https://lhcb.github.io/ostap-tutorials/getting-started/Histos.html)
+  * [Histogram parameterization](https://lhcb.github.io/ostap-tutorials/more-on-histograms/hparams.html)
+  * [Operations with trees/chains](https://lhcb.github.io/ostap-tutorials/getting-started/Trees.html)
+  * [Persistency](https://lhcb.github.io/ostap-tutorials/getting-started/DBASE.html)
+
 ## LaTeX
 
 **LaTeX** -  is a document preparation system. When writing, the writer uses plain text. The writer uses markup tagging conventions to define the general structure of a document (such as article, book, and letter), to stylise text throughout a document (such as bold and italics), and to add citations and cross-references.
