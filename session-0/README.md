@@ -45,6 +45,20 @@ Undo changes:
   * **git reset --hard HEAD** - undo all local changes. Note, here _HEAD_ is not a variable you need to subsititute (type this command as is)!
   * **git checkout myfile.py** - undo changes in one file.
 
+### Remote code storage
+There are several providers, which allow to store a code remotely. Here are some examples:
+  * [GitHub](https://github.com/)
+  * [GitLab](https://about.gitlab.com/)
+  * [BitBucket](https://bitbucket.org/)
+
+You need to have an account for these sites, if you'd like to use them (create change repository).
+ * **git push origin master** - will put your updated master (with all the commits you've made) into this remote storage.
+
+It's better to have a README file in the each folder of the repository or at least in the root-folder of the project. 
+This file will be automatically shown in your web-browser. 
+Now, let's turn to a formatting for these files.
+
+
 Working with remote repository:
   * **git clone https://github.com/USERNAME/REPOSITORY.git** - grab a complete copy of 
      another user's repository
@@ -58,17 +72,6 @@ Working with remote repository:
       you should ensure that your local work is committed before running the pull command. 
   * [A bit more](https://docs.github.com/en/github/using-git/getting-changes-from-a-remote-repository)
   * [Further reading](https://git-scm.com/book/en/Git-Basics-Working-with-Remotes)
-
-### Remote code storage
-There are several providers, which allow to store a code remotely. Here are some examples:
-  * [GitHub](https://github.com/)
-  * [GitLab](https://about.gitlab.com/)
-  * [BitBucket](https://bitbucket.org/)
-
-You need to have an account for these sites, if you'd like to use them (create change repository).
- * **git push origin master** - will put your updated master (with all the commits you've made) into this remote storage.
-
-It's better to have a README file in the each folder of the repository or at least in the root-folder of the project. This file will be automatically shown in your web-browser. Now, let's turn to a formatting for these files.
 
 ## Markdown
 It's preferable to use [Markdown](https://daringfireball.net/projects/markdown/) to prepare documentation for repositories . As authors say, “Markdown” is two things:
