@@ -32,6 +32,20 @@ Note, that uncertainty for 0 events is +-1.
 
 These idea can be also used for two factors analysis. See **two_factors.pdf**.
 
+See more on binomial efficencies in [ostap tutorial](https://lhcb.github.io/ostap-tutorials/getting-started/Histos.html).
+
+## Optimal binning
+
+It is not a rare case when one needs to find the binbing of the histogram that ensures 
+almost equal bin populations. An example is building effciency map on a number of 
+accepted events; This task could be solved using **eqaul_bins** method:
+
+```python
+very_fine_binned_histo = ... ## get the fine binned histograms 
+edges1 = fine_binned.equal_edges ( 10 ) ## try to fing binning with 10 almost equally populated bins 
+edges2 = fine_binned.equal_edges ( 10 , wmax = 5 ) ## try to fing binning with 10 almost equally populated bins, but avoid bins wider than "wmax"
+```
+
 
 ## Weighted events 
 
