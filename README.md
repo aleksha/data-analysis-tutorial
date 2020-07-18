@@ -51,11 +51,11 @@ Practice is organized as a bunch o sessions followed by homeworks. At the end of
       - When to use signal for background rejection optimisations?
   * **Session 3:** Simple classification methods
     * Statistical classification
-    * Support vector machine
-    * k-nearest
+    * Support vector machine (SVM)
+    * k-nearest (kNN)
   * **Session 4:** Multivariate analysis with ROOT.TMVA package 
-    * Boosting Decision Trees
-    * Neural Networks.
+    * Boosting Decision Trees (BDT)
+    * Neural Networks (NN).
   * **Session 5:** Dealing with Monte-Carlo
     * Random number generators in ROOT
     * How to re-weight MC to data?
@@ -63,12 +63,12 @@ Practice is organized as a bunch o sessions followed by homeworks. At the end of
     * How to estimate efficiency for not-well reconstructed events?
   * **Session 6:** Regression problem / Fourier transformation
     * Why Fourier transform is needed?
-    * Using __scipy__ for FFT
+    * Using SciPyy for FFT
     * What is is regression?
     * Least square and Maximum Likelihood methods
-    * Using TMVA to solve regression problem (kNN, BTD, NN).
+    * Using TMVA to solve regression problem (NN, BTD).
 ## Software stack
- * **Ubuntu 18.04 LTS**, as operation system (possible _via_ VirtualBox).
+ * **Ubuntu 20.04 LTS**, as operation system (possible _via_ VirtualBox).
  * **Ostap** for data analysis (default is a _conda_-way).
  * **CERN ROOT** will be used _via_ Ostap, but it has much better documentation.
  * **Git** to store code.
