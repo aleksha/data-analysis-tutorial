@@ -2,10 +2,20 @@
 
 **__“Probieren geht über studieren” (Trying beats studying).__**
 
-This of repository contains documentation and code, which are needed for a practice in a Laboratory of baryonic physics of High energy physics department of PNPI.
+This repository contains documentation and code, which are needed for a PhD-practice in a Laboratory of baryonic physics of High energy physics department of Petersburg Nuclear Physics Institute (LBP HEPD PNPI). Main goal of the practice to show an analysis chain in Particle Physics.
 
-Practice is organized as a bunch o sessions followed by homeworks. At the end of the practice student reports are expected.
+Practice is organized as a bunch of sessions followed by homeworks. At the end of the practice reports from students are expected.
 
+## Software stack
+ * **Ubuntu 20.04 LTS**, as operation system (possible _via_ VirtualBox).
+ * **Ostap** for data analysis (default is a _conda_-way).
+ * **CERN ROOT** will be used _via_ Ostap, but it has much better documentation.
+ * **Git** to store code.
+ * **Markdown**  way to style text on the web.
+ * **LaTeX** to prepare report.
+
+Note, that ths software list reflects LBP's stack. Other solutions are also possible, though they will not be covered by the practice.
+ 
 ## Precursors
 * **PNPI PhD course of statistics and data analysis** mainly to have a proper vocabular.
 * **Python programming language**. Here are some documentation, tutorials as well as a couple of courses (in Russian):
@@ -67,10 +77,4 @@ Practice is organized as a bunch o sessions followed by homeworks. At the end of
     * What is is regression?
     * Least square and Maximum Likelihood methods
     * Using TMVA to solve regression problem (NN, BTD).
-## Software stack
- * **Ubuntu 20.04 LTS**, as operation system (possible _via_ VirtualBox).
- * **Ostap** for data analysis (default is a _conda_-way).
- * **CERN ROOT** will be used _via_ Ostap, but it has much better documentation.
- * **Git** to store code.
- * **Markdown**  way to style text on the web.
- * **LaTeX** to prepare report.
+
