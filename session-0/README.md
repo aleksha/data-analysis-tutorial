@@ -1,6 +1,6 @@
 # Setup session
 
-Here we'll meet a key components, which will be needed for the practice.
+The goal of the session is to introdduec key components, which will be needed for the practice.
 
 ## Git
 
@@ -10,7 +10,7 @@ A _distributed version control_ (also known as _distributed revision control_) i
 
 ### Quick start
 
-Here we follow [this explanation](https://youtu.be/oLN3-1UX0-A).
+Here, we'll follow [this explanation](https://youtu.be/oLN3-1UX0-A).
 
 Main commands:
   * **git clone URL** - clone a repository (with history and branches);
@@ -48,16 +48,11 @@ Undo changes:
 ### Remote code storage
 There are several providers, which allow to store a code remotely. Here are some examples:
   * [GitHub](https://github.com/)
-  * [GitLab](https://about.gitlab.com/)
+  * [GitLab](https://gitlab.com/)
   * [BitBucket](https://bitbucket.org/)
 
 You need to have an account for these sites, if you'd like to use them (create change repository).
  * **git push origin master** - will put your updated master (with all the commits you've made) into this remote storage.
-
-It's better to have a README file in the each folder of the repository or at least in the root-folder of the project. 
-This file will be automatically shown in your web-browser. 
-Now, let's turn to a formatting for these files.
-
 
 Working with remote repository:
   * **git clone https://github.com/USERNAME/REPOSITORY.git** - grab a complete copy of 
@@ -73,8 +68,13 @@ Working with remote repository:
   * [A bit more](https://docs.github.com/en/github/using-git/getting-changes-from-a-remote-repository)
   * [Further reading](https://git-scm.com/book/en/Git-Basics-Working-with-Remotes)
 
+
+It's better to have a README file in the each folder of the repository or at least in the root-folder of the project. 
+This file will be automatically shown in your web-browser. Now, let's turn to a formatting for these files.
+
 ## Markdown
-It's preferable to use [Markdown](https://daringfireball.net/projects/markdown/) to prepare documentation for repositories . As authors say, “Markdown” is two things:
+It's preferable to use [Markdown](https://daringfireball.net/projects/markdown/) to prepare documentation 
+for repositories . As authors say, “Markdown” is two things:
   1. A plain text formatting syntax;
   2. A software tool, written in Perl, that converts the plain text formatting to HTML.
 We will use the first, as the second is already implemented all over the web. 
@@ -133,6 +133,9 @@ We'll follow [original tutorial](https://lhcb.github.io/ostap-tutorials/).
   * [Operations with trees/chains](https://lhcb.github.io/ostap-tutorials/getting-started/Trees.html)
   * [Persistency](https://lhcb.github.io/ostap-tutorials/getting-started/DBASE.html)
 
+Note, that there is a copy of this tutorial pages here. 
+This is kindly allowed by Ivan Belyaev (Ostap's daddy).
+
 ## LaTeX
 
 **LaTeX** -  is a document preparation system. When writing, the writer uses plain text. The writer uses markup tagging conventions to define the general structure of a document (such as article, book, and letter), to stylise text throughout a document (such as bold and italics), and to add citations and cross-references.
@@ -150,5 +153,9 @@ One can use web solution to create and edit LaTeX projects. [Overleaf](https://w
 Create a documentaion about one of special probability density function (requested by a teacher).
 
 ### Expected outcome
-  * Document in pdf-format containig proper information 
+  * Document in pdf-format containig proper information:
+    - A bit of historical overvew
+    - PDF, CDF, Moments 
+    - Figures of PDF with different parameter set
+    - Possible application of this PDF 
   * Link to a git repository (_github_, _gitlab_, _bitbucket_ or whatsoever), which contains a source code for figures in the report. Repository must contain a documentation on what is going on. 
