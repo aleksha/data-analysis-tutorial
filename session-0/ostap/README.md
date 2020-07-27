@@ -7,4 +7,6 @@ is done with a permissions from Ivan Belyaev (father of this system).
 
 In addition, some attepmts could be found in `OSTAP.md` and `HISTO.md` files
 
+Unfortunately official ostap tutorial contain old (LHCb) naming of the modules.Proper one can be found in a source code (test folders):
+  * `VE` [Link](https://github.com/OstapHEP/ostap/tree/master/ostap/math/tests)
 
