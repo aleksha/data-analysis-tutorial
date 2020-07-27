@@ -28,26 +28,26 @@ Main commands:
 
 Typical workflow with the repository you have:
   1. Make changes in a code (for example in _file.py_).
-  2. **git add file.py**
-  3. **git commit -m "We did that and that"**
+  2. `git add file.py`
+  3. `git commit -m "We did that and that"`
 
 The main code 'line' is calles _master_. It contains a code of the project. Anothe branches of the code are also posiible.
 
 Branches are quite a powerfull concept:
-  * **git branch BRANCH_NAME** - to create a new branch, for example, to develope a new feature.
+  * `git branch BRANCH_NAME` - to create a new branch, for example, to develope a new feature.
   * Change files and commit changes. They will be done in our new branch.
-  * **git checkout master** - switch to master. For example, if you find a bug in the previous code base and want to fix it.
+  * `git checkout master` - switch to master. For example, if you find a bug in the previous code base and want to fix it.
   * Change files and commit changes. They will be done in master.
-  * **git branch BRANCH_NAME** - switch back to the branch.
-  * **git merge master** - bring changes we made in master into the branch.
+  * `git branch BRANCH_NAME` - switch back to the branch.
+  * `git merge master` - bring changes we made in master into the branch.
   * Change files and commit changes. They will be done in our new branch.
-  * **git checkout master** - switch to master agiain.
-  * **git merge master** - bring changes we made in the branch into the master.
-  * **git br -d BRANCH_NAME** - remove the branch as the feature we finished to develope is already in the master.
+  * `git checkout master` - switch to master agiain.
+  * `git merge master` - bring changes we made in the branch into the master.
+  * `git br -d BRANCH_NAME` - remove the branch as the feature we finished to develope is already in the master.
 
 Undo changes:
-  * **git reset --hard HEAD** - undo all local changes. Note, here _HEAD_ is not a variable you need to subsititute (type this command as is)!
-  * **git checkout myfile.py** - undo changes in one file.
+  * `git reset --hard HEAD` - undo all local changes. Note, here _HEAD_ is not a variable you need to subsititute (type this command as is)!
+  * `git checkout myfile.py` - undo changes in one file.
 
 ### Remote code storage
 There are several providers, which allow to store a code remotely. Here are some examples:
@@ -56,18 +56,18 @@ There are several providers, which allow to store a code remotely. Here are some
   * [BitBucket](https://bitbucket.org/)
 
 You need to have an account for these sites, if you'd like to use them (create change repository).
- * **git push origin master** - will put your updated master (with all the commits you've made) into this remote storage.
+ * `git push origin master` - will put your updated master (with all the commits you've made) into this remote storage.
 
 Working with remote repository:
-  * **git clone https://github.com/USERNAME/REPOSITORY.git** - grab a complete copy of 
+  * `git clone https://github.com/USERNAME/REPOSITORY.git` - grab a complete copy of 
      another user's repository
-  * **git fetch remotename** - retrieve new work done by other people. Fetching from a repository 
+  * `git fetch remotename` - retrieve new work done by other people. Fetching from a repository 
      grabs all the new remote-tracking branches and tags without merging those changes into your own branches.
-  * **git merge remotename/branchname** - Merging combines your local changes with changes made by others.
+  * `git merge remotename/branchname` - Merging combines your local changes with changes made by others.
      Typically, you'd merge a remote-tracking branch (i.e., a branch fetched from a remote repository)
      with your local branch.
-  * **git pull remotename branchname** -  is a convenient shortcut for completing both **git fetch**
-      and **git merge** in the same command. Because pull performs a merge on the retrieved changes, 
+  * `git pull remotename branchname` -  is a convenient shortcut for completing both **git fetch**
+      and `git merge` in the same command. Because pull performs a merge on the retrieved changes, 
       you should ensure that your local work is committed before running the pull command. 
   * [A bit more](https://docs.github.com/en/github/using-git/getting-changes-from-a-remote-repository)
   * [Further reading](https://git-scm.com/book/en/Git-Basics-Working-with-Remotes)
