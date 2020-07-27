@@ -128,6 +128,25 @@ In our practice we use a three ([matryoshka](https://en.wikipedia.org/wiki/Matry
     - powerful, pickle-based persistency for object;
     - interactive **ostap** analysis environment (which will be a default one for the practice).
 
+### How-to install
+
+Possible installation procedures are discribed [here](https://github.com/OstapHEP/ostap/blob/master/INSTALL.md).
+
+#### Conda way to install Ostap
+```bash
+wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+sh Miniconda3-latest-Linux-x86_64.sh
+source path-to-miniconda/etc/profile.d/conda.sh
+conda config --add channels conda-forge
+conda create --name ostap-env ostaphep
+conda activate ostap-env
+```
+
+To deactivate ostap envoirment type
+```bash
+conda deactivate
+```
+
 ### Introduction to Ostap
 We'll follow [original tutorial](https://lhcb.github.io/ostap-tutorials/).
 
