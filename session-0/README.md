@@ -10,6 +10,11 @@ A _distributed version control_ (also known as _distributed revision control_) i
 
 ### Quick start
 
+To install git at Ubuntu just type
+```bash
+sudo apt install git
+```
+
 Here, we'll follow [this explanation](https://youtu.be/oLN3-1UX0-A).
 
 Main commands:
