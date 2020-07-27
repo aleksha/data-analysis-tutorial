@@ -120,7 +120,7 @@ More functionality is provided by special module entering [scipy](https://docs.s
 
 In our practice we use a three ([matryoshka](https://en.wikipedia.org/wiki/Matryoshka_doll) way packed) frameworks:
   * [ROOT](https://root.cern.ch/) - a modular scientific software toolkit. It provides all the functionalities needed to deal with big data processing, statistical analysis, visualisation and storage. It is mainly written in **C++** but integrated with other languages such as **Python** and **R**.
-  * [RooFit](https://root.cern.ch/roofit-20-minutes) - is a package that allows for modeling probability distributions in a compact and abstract way. It is distributed with **ROOT**.
+  * [RooFit](https://root.cern.ch/doc/master/group__tutorial__roofit.html) - is a package that allows for modeling probability distributions in a compact and abstract way. It is distributed with **ROOT**.
   * [Ostap](https://github.com/OstapHEP/ostap) - is a community-driven initiative aiming to provide more user friendly and more intuitive interface to **ROOT** and extending the existing functionality. It provides (as authors insist):
     - very easy manipulations with **ROOT** and **RooFit** objects: histograms, trees, datasets, _etc_;
     - very easy interface to **RooFit** machinery;
