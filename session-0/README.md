@@ -17,14 +17,14 @@ sudo apt install git
 Here, we'll follow [this explanation](https://youtu.be/oLN3-1UX0-A).
 
 Main commands:
-  * **git clone URL** - clone a repository (with history and branches);
-  * **git init** - create a new empty repository;
-  * **git status** - show current status: branch, changes made and added files;
-  * **git diff** - changes, which you made for the files at staging.
-  * **git add** - add file to staging, they will be used in a foreseen commit;
-  * **git commit** - commit changes to repository;
-  * **git log** - history of commits
-  * **git show COMIMT_HASH** - shows a commit you want to see (main information and changes made);
+  * `git clone URL` - clone a repository (with history and branches);
+  * `git init` - create a new empty repository;
+  * `git status` - show current status: branch, changes made and added files;
+  * `git diff` - changes, which you made for the files at staging.
+  * `git add` - add file to staging, they will be used in a foreseen commit;
+  * `git commit` - commit changes to repository;
+  * `git log` - history of commits
+  * `git show COMIMT_HASH` - shows a commit you want to see (main information and changes made);
 
 Typical workflow with the repository you have:
   1. Make changes in a code (for example in _file.py_).
