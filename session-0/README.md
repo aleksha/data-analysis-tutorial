@@ -14,7 +14,6 @@ To install git at Ubuntu just type
 ```bash
 sudo apt install git
 ```
-
 Here, we'll follow [this explanation](https://youtu.be/oLN3-1UX0-A).
 
 Main commands:
@@ -78,6 +77,7 @@ It's better to have a README file in the each folder of the repository or at lea
 This file will be automatically shown in your web-browser. Now, let's turn to a formatting for these files.
 
 ## Markdown
+
 It's preferable to use [Markdown](https://daringfireball.net/projects/markdown/) to prepare documentation 
 for repositories . As authors say, “Markdown” is two things:
   1. A plain text formatting syntax;
