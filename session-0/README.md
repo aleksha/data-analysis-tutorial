@@ -28,7 +28,7 @@ Main commands:
   * **git show COMIMT_HASH** - shows a commit you want to see (main information and changes made);
 
 Typical workflow with the repository you have:
-  1. Make chnges in a code (for example in _file.py_).
+  1. Make changes in a code (for example in _file.py_).
   2. **git add file.py**
   3. **git commit -m "We did that and that"**
 
