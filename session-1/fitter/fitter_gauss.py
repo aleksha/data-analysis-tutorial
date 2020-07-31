@@ -5,7 +5,7 @@ from   ostap.histos.histos  import h1_axis
 from Functions import *
 #-------------------------------------------------------------------------------
 rfile = ROOT.TFile("test_file.root","READ")
-ds_pi = rfile["ds_pi"]
+#ds = rfile["ds_pi"]
 ds    = rfile["ds_k"]
 #-------------------------------------------------------------------------------
 im = ROOT.RooRealVar ('im'   , 'im'                 ,  2.240 , 2.330 )
