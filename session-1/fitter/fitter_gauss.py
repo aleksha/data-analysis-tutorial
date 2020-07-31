@@ -5,8 +5,8 @@ from   ostap.histos.histos  import h1_axis
 from Functions import *
 #-------------------------------------------------------------------------------
 rfile = ROOT.TFile("test_file.root","READ")
-#ds = rfile["ds_pi"]
-ds    = rfile["ds_k"]
+ds = rfile["ds_pi"]
+#ds = rfile["ds_k"]
 #-------------------------------------------------------------------------------
 im = ROOT.RooRealVar ('im'   , 'im'                 ,  2.240 , 2.330 )
 pk = ROOT.RooRealVar ('pk'   , 'peak   '   , 2.2875 ,  2.286 , 2.289 )
@@ -25,7 +25,7 @@ with timing():
 #-------------------------------------------------------------------------------
 print(r)
 #-------------------------------------------------------------------------------
-#h = w.pullHist()
-#draw_param( r, w, h, 90, im, 0.06*ds.sumEntries(), name="Lc", XTitle ="Mass",
-#                Prefix="Gauss" , Type="png", var_Units = "GeV/c^{2}")
+h = w.pullHist()
+draw_param( r, w, h, 90, im, 0.06*ds.sumEntries(), name="Lc", XTitle ="Mass",
+                Prefix="Gauss" , Type="png", var_Units = "GeV/c^{2}")
 #-------------------------------------------------------------------------------
