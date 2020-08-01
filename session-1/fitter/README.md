@@ -2,6 +2,7 @@
 
 ## Download file with data
 
+Here is some test dataset of the unknown source.
 ```bash
 wget http://adzyuba.web.cern.ch/adzyuba/d/test_file.root
 ```
@@ -19,7 +20,12 @@ with timing():
     print( ds )
 ```
 
+Please, note very useful `timing()` and  `memory()` utils of Ostap.
+
 ## Variables in the dataset
+
+  * **ds_pi** - charmed baryons into p+ K- pi+ final state
+  * **ds_k**  - charmed baryons into p+ K- K+ 
 
   1.  `pt` - transverce momentum of charm baryon candidate
   2.  `y` - rapidity pf charm baryon
@@ -48,6 +54,116 @@ with timing():
   25. `lgi` - **log10(Chi2IP)**
 
 ## RooFit objects
+
+As Ostap relays on **RooFit** for fits, an understanging of the underlying objects
+are necessary. Here are some of them:
+  * `RooAbsArg` is the common abstract base class for objects that represent 
+    a value (of arbitrary type) and "shape" that in general depends on (is a client of) 
+    other `RooAbsArg` subclasses.
+  * `RooRealVar` represents a variable that can be changed from the outside. 
+    For example by the user or a fitter.
+  * `RooArgList` is a container object that can hold multiple `RooAbsArg` objects. 
+    The container has list semantics which means that:
+    - Contained objects are ordered, The iterator follows the object insertion order.
+    - Objects can be retrieved by name and index
+    - Multiple objects with the same name are allowed
+  * `RooArgSet` is a container object that can hold multiple `RooAbsArg` objects. 
+    The container has set semantics which means that:
+     - Every object it contains must have a unique name returned by GetName().
+     - Contained objects are not ordered, although the set can be traversed using an iterator returned by createIterator(). The iterator does not necessarily follow the object insertion order.
+     - Objects can be retrieved by name only, and not by index.
+  * `RooDataSet` is a container class to hold unbinned data. The binned equivalent is `RooDataHist`. 
+    In `RooDataSet`, each data point in N-dimensional space is represented by a `RooArgSet` of `RooRealVar`, 
+    Since `RooDataSet` saves every event, it allows for fits with highest precision. With a large amount 
+    of data, however, it could be beneficial to represent them in binned form, i.e., `RooDataHist`. 
+    Binning the data will incur a loss of information, though. `RooDataHist` on the other hand may suffer 
+    from the curse of dimensionality if a high-dimensional problem with a lot of bins on each axis is tackled. 
+  * `RooDataHist` is a container class to hold N-dimensional binned data. Each bin's central coordinates 
+    in N-dimensional space are represented by a `RooArgSet` containing `RooRealVar`,
+  * `RooFitResult` is a container class to hold the input and output of a PDF fit to a dataset. It contains:
+    - Values of all constant parameters
+    - Initial and final values of floating parameters with error
+    - Correlation matrix and global correlation coefficients
+    - NLL and EDM at mininum
+
+
+See more in a [RooFit class reference documentation](https://root.cern.ch/doc/master/group__Roofitcore.html).
+
+### `RooArgSet` and `RooArgList`
+
+All these classes have got set of additional python-like methods for iteration, extension, addition, 
+element access checking the content etc... Also several methods to provide more coherent interfaces 
+(e.g. add vs Add) are added. 
+
+### `RooRealVar`
+
+Few simple operations are added to simplify the calculations with `RooRealVar` objects:
+```python
+x = ROOT.RooRealVar( ... )
+x + 10 
+x - 10 
+x * 10 
+x / 10 
+10 + x 
+10 - x 
+10 * x 
+10 / x
+x += 2 
+x -= 2 
+x *= 2 
+x /= 2 
+x ** 3
+```
+
+### `RooAbsData` and `RooDataSet`
+
+These methods also have got the extended interface with many useful methods and operators, 
+like e.g. concatenation of datasets a+b and merging them a*c. `RooDataSet` class also has go many methods, 
+that are similar to those of `ROOT.TTree`, in particular project and draw:
+
+```python
+dataset = ... 
+dataset.draw('mass','pt>1')  
+histo   = ...
+dataset.project ( histo , 'mass', 'pt>1' )
+```
+
+Many other methonds like `statVar`, `sumVar` , `statCov` , `vminmax` are also the same 
+as for `ROOT.TTree`, see above.
+
+```python
+s1    = dataset.statVar ('eff') 
+s2    = dataset.sumVar  ('eff') 
+r     = dataset.statCov ('eff','pt') 
+mn,mx = dataset.vminmax ('eff')
+```
+
+### `RooFitResult`
+
+The class `RooFitResult` get many decorations that allow to access fit results
+```python
+result = ...
+par1 = result.params()  ## get all floating parameters 
+par2 = result.params( float_only = False ) ## all parameters 
+a,v  = result.param ( 'a' )      ## par by name 
+a,v  = result.param (  a  )      ## par by RooFit object itself 
+p    = result.a                  ## par as attribute 
+for par in result :
+   print (par)                ## iteration 
+for name,par in result.iteritems() : print par ## iteration
+   print ( result.cov  ( 'a' , 'b'  ) ) ## get the covariance submatrix  
+   print ( result.corr ( 'a' , 'b'  ) ) ## get the correlation coefficient
+```
+
+Also the simple math with fiting parameters is supported
+```python
+result = ...
+s = result.sum       ('S','B' ) ## S+B
+d = result.divide    ('S','B' ) ## S/B
+s = result.subtract  ('B','B1') ## B-B1
+m = result.multiply  ('A','B' ) ## A*B 
+f = result.fraction  ('S','B' ) ## S/(S+B)
+```
 
 ## Working with dataset
 
