@@ -215,7 +215,7 @@ r,w = model.chi2fitTo( dh, draw=True)
 r.minNll()
 ```
 
-## More sophisicated signal shapes.
+## More complex PDFs
 
 Some pretty decoration is easy to make. See `Functions.py`
 as an example. 
