@@ -3,7 +3,7 @@
 ## Content
 
   * Fitting a signal:
-    - Chi-square and maximum likelyhood fits.
+    - Chi-square and maximum likelihood fits.
     - Extended and non-extended fits.
   * Uncertainty validation using Toy-Monte-Carlo.
   * Distributions for a signal and a background components:
@@ -61,7 +61,8 @@ There are a lot of different estimators and esimator types:
   * Kalman filter, and its various derivatives
   * Wiener filter
 
-In our practice we will mainly use Maximum likelihood estimators.
+In our practice we will mainly use unbinned **Maximum likelihood estimators**
+or binned **Chi2-based estimation**.
 
 ## Maximum likelihood method
 
@@ -146,6 +147,8 @@ part of [Review of Particle Physics](http://pdg.lbl.gov/2018/reviews/rpp2018-rev
 
 Here we follow an [official tutorial](https://lhcb.github.io/ostap-tutorials/).
 
+See examples in **__./fitting/__** folder.
+
 ### Avalable pre-defined models
 
 List below isn't exhausive (take a look into Ostape source code for the updates):
@@ -177,109 +180,20 @@ m = result.multiply  ('A','B' ) ## A*B
 f = result.fraction  ('S','B' ) ## S/(S+B)
 ```
 
+## Uncertainties
 
-## Validation of uncertainties
+To be sure that uncertainties, which are evaluated from a fitting are
+correct, one have to vallidate them using toy Monte-Carlo.
 
-Here we follow [Kerim Guseynov's tutorial](https://indico.cern.ch/event/902801/)
-(access could be restricted).
+The concept of the contour and profile-likelihood are also discussed.
 
-The result of a fit is ** parameter = value± +/- stat.err**.
-
-After performing a fit one have to validate its result. As uncertainties obtained from 
-the fitting routines are statistical, one need a number of data samples that differ 
-within statistical unsertainties. An easeast way to get them, is to generate a random 
-samples according to parameters of the obtained fit results.
-
-```python
-import ostap.fitting.toys as Toys
-Toys.make_toys(
-    pdf,           # the model to fit:  
-    nToys,         # number of generate-fitTo repetitions
-    data,          # variables to be pdf.generate’d
-    gen_config,    # dict:  pdf.generate(..., **gen_config)
-    fit_config={}, # dict:  pdf.fitTo(..., **fit_config)
-    init_pars={},  # parameters’ values from the exp. fit
-    more_vars={},  # dict:  {’key’:  lambda res, pdf:  func}
-    silent=True,
-    progress=True  # progress bar:  fraction of toys completed
-)
-```
-
-If one wants to have different pdfs for generation and fitting:
-```python
-Toys.make_toys2(gen_pdf, fit_pdf, nToys, data,
-    gen_config, fit_config, 
-    gen_pars, fit_pars,
-    more_vars, silent, progress)
-)
-```
-
-
-```python
-result, stats = Toys.make_toys(model, nToys, ...)
-#result {’parname’:  [VE1, VE2, ...], ...} is a dict of lists of VE
-result['parname'].value()
-result['parname'].error()
-#stats  {’parname’:  SE, ...} is  dict of Ostap.StatEntity’s
-SE.nEntries(); 
-SE.min(); 
-SE.max(); 
-SE.mean(); 
-SE.rms()
-```
-
-**Important:** take care about initial random number generator seedidng.
-For example (correct but reproducability of a result will impossible):
-```python
-import time
-int_num = int(time.time())
-ROOT.RooRandom.randomGenerator().SetSeed(int_num)
-```
+See **__./uncertainties/__** folder.
 
 ## Signal distribution
 
-### Sideband subtruction
+Methods of getting distribution on control variables, using a fit on a
+distcrimination variabels are discusse in **__./signal/__** folder.
 
-This method exploit an aproach that shape of a bagrouund events under a signal peak
-is the same as outside a peak. One can subtrack the distribution from the distribution
-for the events in the preak region.
-
-Usually **+/-2sigma** around a peak position is used for the signal region and 
-**(-7,-5)sigma** and **(5,7)-sigma*** intervals are used for subtruction.
-
-**Important**:
-  - Take care about proper normalisation;
-  - Background distribution should be quite flat.
-
-### Fit-in-bin
-
-One can split a data into subsamples on a control variable and perform a MLE in each bin.
-This method is quite CPU consuming.
-
-
-### sPlot techinqie
-
-Here, idea is quite simple. Each event in MLE fitting has certain contribution to the
-signal and background part of likelihood function. One can calculate a statistical
-weight for each event with rearkble properties, which allow to use them to detrmine
-distribution of a control variable.
-
-**Important:** control variables have to be independent on a discriminating variable(s)!
-
-Useful links:
- * [Official paper](https://www.sciencedirect.com/science/article/pii/S0168900205018024?via%3Dihub)
- * [Arxiv version](https://arxiv.org/abs/physics/0402083)
- * [Alex Rogozhnikov's explanation](http://arogozhnikov.github.io/2015/10/07/splot.html)
-
-Using __sPlot__ is rather trivial in Ostap:
-```python
-dataset = ...
-model   = Fit1D ( signal = ... , backgrund = ... ) 
-model.fitTo ( dataset )
-print datatset   
-model.sPlot ( dataset )  ## <--- HERE 
-print datatset           ## <--- note appearence of new variables
-```
 
 ## Homework
 

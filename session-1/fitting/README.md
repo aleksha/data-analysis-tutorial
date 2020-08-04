@@ -221,8 +221,8 @@ Some pretty decoration is easy to make. See `Functions.py`
 as an example. 
 
 If one fit full **ds_pi** (Lambda_c-->p+K-pi+ case), when he/she will spot
-that fit with simple Gaussian doesn't work sufficiently well.
-Ostap provides a lot of different signal shapes. Try
+that fit with simple Gaussian doesn't work sufficiently well (see pull 
+distribution). Ostap provides a lot of different signal shapes. Try
 ```bash
 ostap -b fitter_apolo.py
 ostap -b fitter_bukin.py
