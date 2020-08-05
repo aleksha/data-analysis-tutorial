@@ -15,10 +15,32 @@ A dataset for **Lambda_c->pK-pi+** contains a mis-ID background:
 They are visible in a mass distribution, for which a proton energy is
 recalculated under kaon mass hypothesis.
 
-See `complex.py`, which fits an upper sideband.
-
+See `combine.py`, which fits an upper sideband.
 
 ## Convolution
+
+Ostap provides helper class that simplify construction of fit models taking into accotun resolution functions:
+
+'''python
+pdf = ...
+cnv_pdf = Convolution_pdf ( 'Cnv            ' , 
+                             pdf = pdf        , 
+                             resolution = ... )
+'''
+
+As resolution one can specify
+  * Any resolutuon model (`RooAbsPdf`)
+  * simple number s, in this case the gaussian resolution model with `sigma = s` will be used
+  * Any `RooAbsReal` objetct, it will be used as sigma for gaussian resoltuion model
+
+There are several optional flags:
+  * `useFFT=True` : use Fast-Fourier-Transform or plain numerical convolution ?
+  * `nbins=100000` : sampling for Fast-Fourier-Transform
+  * `buffer=0.25` : buffer size for Fast-Fourier-Transform, argument for `setBufferFraction` call
+  * `nsigmas=6` : window size for plain numeric convolution, the argument for `setConvolutionWindow` 
+
+
+See `convolution.py`, which fits with `Voigt_pdf`, smeared and non-smeared `BreitWigner_pdf`.
 
 ## 2D and 3D fits
 
