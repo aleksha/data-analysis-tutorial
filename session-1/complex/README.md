@@ -49,6 +49,8 @@ inhetic from PDF and gets all the nice functionality. Of course several
 new method specific for 2D and 3D-cases are added and th ebehaviosu of 
 some 1D-specific methods is fixed. 
 
+See `two-d.py` example.
+
 ### Useful 2D-background models
 
 2D-models useful to describe non-factorazable (**f(x,y)!=f(x)*f(y)**) background:
