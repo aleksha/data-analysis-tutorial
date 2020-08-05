@@ -1,6 +1,24 @@
 # More complex examples
 
+```bash
+wget http://adzyuba.web.cern.ch/adzyuba/d/test_file.root
+```
+
 ## Composite PDFs
+
+Models can contain composite signals and background.
+
+A dataset for **Lambda_c->pK-pi+** contains a mis-ID background:
+  * **D+->K+K-pi+** (K+ --> p miss-ID);
+  * **Ds+->K+K-pi+** (K+ --> p miss-ID);
+  * **Ds+->pi+K-pi+** (pi+ --> p miss-ID).
+They are visible in a mass distribution, for which a proton energy is
+recalculated under kaon mass hypothesis.
+
+See `complex.py`, which fits an upper sideband.
+
+
+## Convolution
 
 ## 2D and 3D fits
 
