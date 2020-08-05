@@ -17,6 +17,8 @@ recalculated under kaon mass hypothesis.
 
 See `combine.py`, which fits an upper sideband.
 
+Much more [here](https://lhcb.github.io/ostap-tutorials/fitting/compound.html).
+
 ## Convolution
 
 Ostap provides helper class that simplify construction of fit models taking into accotun resolution functions:

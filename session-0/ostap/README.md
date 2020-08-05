@@ -40,10 +40,10 @@ Check out `Ostap.Kinematics` and `Ostap.LorentzVector`.
 
  - **Math**
     * [Finding roots](https://github.com/OstapHEP/ostap/blob/master/ostap/math/tests/test_math_rootfinder.py)
-    * {Test for primes}(https://github.com/OstapHEP/ostap/blob/master/ostap/math/tests/test_math_primes.py)
+    * [Test for primes](https://github.com/OstapHEP/ostap/blob/master/ostap/math/tests/test_math_primes.py)
     * Linear algebra([1](https://github.com/OstapHEP/ostap/blob/master/ostap/math/tests/test_math_linalgt.py), [2](https://github.com/OstapHEP/ostap/blob/master/ostap/math/tests/test_math_linalg2.py))
     * [Interpolation](https://github.com/OstapHEP/ostap/blob/master/ostap/math/tests/test_math_interpolation.py)
-    * {Derivatives}(https://github.com/OstapHEP/ostap/blob/master/ostap/math/tests/test_math_derivative.py)
+    * [Derivatives](https://github.com/OstapHEP/ostap/blob/master/ostap/math/tests/test_math_derivative.py)
     * [Integrals](https://github.com/OstapHEP/ostap/blob/master/ostap/math/tests/test_math_integral.py)
     * [Covariance matrix transformation](https://github.com/OstapHEP/ostap/blob/master/ostap/math/tests/test_math_covtransform.py)
   - **Input/output**

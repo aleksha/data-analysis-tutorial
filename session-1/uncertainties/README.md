@@ -1,5 +1,22 @@
 # Uncertainties
 
+## Profile likelihood
+
+Log-likelihood profile is easy to draw.
+
+Note, to evaluate profiled-likelihood one have to use an option `profile=True`.
+
+See `profile.py`.
+
+## Contours
+
+Profile likelihood is exactly, what **Minuit (MINOS)** is doing, when procuces countours.
+
+See [slide 53](https://indico.cern.ch/event/72320/contributions/2082589/attachments/1037201/1478048/roofit-intro-roostats-v11a.pdf)
+
+A machinery to use Minuit from Ostap is also available.
+See [an example](https://github.com/OstapHEP/ostap/blob/bc897f09f415f46334a62c82fb07f86d8497147b/ostap/fitting/tests/test_fitting_minuit.py).
+
 ## Validation of uncertainties
 
 Here we follow [Kerim Guseynov's tutorial](https://indico.cern.ch/event/902801/)
@@ -57,9 +74,5 @@ import time
 int_num = int(time.time())
 ROOT.RooRandom.randomGenerator().SetSeed(int_num)
 ```
-
-## Contours
-
-## Profile likelihood
 
 
