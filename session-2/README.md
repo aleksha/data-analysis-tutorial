@@ -15,8 +15,8 @@
 
 For large number of events it's good to produce a pull-plots, deviation 
 (in **sqrt(n)**for **n** events in bin) for each bin.  This plot should
-not contain so-called wiggles ofintervalse of large deviation. An example 
-of f function, which draw nice plots:
+not contain so-called wiggles of intervals witha a deviation to one side. 
+An example of function, which draw nice plots:
 
 ```python
 def draw_param(r_fit, w_fit, h_fit, N_BINS, var, W_max, name, XTitle, Prefix, Type, var_Units):
@@ -120,6 +120,8 @@ It could be generated using toys:
  - they are re-fitted with the model (at each re-fit a likelihood is computed)
  - compare observed value of likelihood (from main fit) with obtained distribution
   (same ideology as for the chi2 case).
+
+See `goodness/goodfit.py`
 
 ## Significance
 
