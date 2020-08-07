@@ -6,6 +6,10 @@ wget http://adzyuba.web.cern.ch/adzyuba/d/test_file.root
 
 ## Composite PDFs
 
+<<<<<<< HEAD
+## Convolution
+
+=======
 Models can contain composite signals and background.
 
 A dataset for **Lambda_c->pK-pi+** contains a mis-ID background:
@@ -44,6 +48,7 @@ There are several optional flags:
 
 See `convolution.py`, which fits with `Voigt_pdf`, smeared and non-smeared `BreitWigner_pdf`.
 
+>>>>>>> 8e0ecd41098b37227c9960c5adecd8ae47c4a316
 ## 2D and 3D fits
 
 For 2D and 3D cases there are base classes PDF2 and PDF3 that in turn 
