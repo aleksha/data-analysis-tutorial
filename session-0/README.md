@@ -147,6 +147,37 @@ To deactivate ostap envoirment type
 conda deactivate
 ```
 
+### Jupyter
+
+Ostap turs to work with [Jupyter](https://jupyter.org/).
+
+To install it with conda-based ostap:
+```bash
+pip3 install --upgrade pip
+pip3 install jupyter
+jupyter -h
+```
+
+To run it in **test** with available `test_file.root`:
+```bash
+mkdir test
+cd test
+wget http://adzyuba.web.cern.ch/adzyuba/d/test_file.root
+jupyter notebook --port=9999
+```
+Open a link (with token) in your browser.
+
+To have an access from a remote machine one can use _ssh-tunneling_.
+On a remote machine run:
+```bash
+jupyter notebook --no-browser --port=9999
+```
+On your local machine run:
+```bash
+ssh -L localhost:5555:localhost:9999 remoteuser@remotehost
+```
+Open `localhost:5555` in your browser on the local machine.
+
 ### Introduction to Ostap
 We'll follow [original tutorial](https://lhcb.github.io/ostap-tutorials/).
 
