@@ -148,8 +148,11 @@ conda deactivate
 ```
 
 ### Jupyter
-
 Ostap turs to work with [Jupyter](https://jupyter.org/).
+
+The Jupyter Notebook is an open-source web application that allows you to createand share 
+documents that contain live code, equations, visualizations andnarrative text.
+
 
 To install it with conda-based ostap:
 ```bash
