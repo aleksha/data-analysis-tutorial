@@ -3,7 +3,7 @@
 ## Content
 
   * Fitting a signal:
-    - Chi-square and maximum likelyhood fits.
+    - Chi-square and maximum likelihood fits.
     - Extended and non-extended fits.
   * Uncertainty validation using Toy-Monte-Carlo.
   * Distributions for a signal and a background components:
@@ -22,13 +22,13 @@ data taking:
 where enumerator contains [cross-section](https://en.wikipedia.org/wiki/Cross_section_(physics)) 
 of the X production (**σ**), and the denominator contains: integrated 
 [luminosity](https://en.wikipedia.org/wiki/Luminosity_(scattering_theory)) 
-(**L**), probebility of the X to decay into a selected final state (**B**) and overall 
+(**L**), probability of the X to decay into a selected final state (**B**) and overall 
 efficiency of the detection (**ε**). Note, that **N** is a Poisson-distributed random value.
 
 In practice, there are background events in addition to signal ones. 
 The task is to make an estimation (**S**) of **N**. 
-Differnt estimators (means different rules for calculating an estimate 
-of a given quantity based on observed data) are posiible.
+Different estimators (means different rules for calculating an estimate 
+of a given quantity based on observed data) are possible.
 The attractiveness of different estimators can be judged by looking at 
 their properties, such as:
   * [unbiasedness](https://en.wikipedia.org/wiki/Unbiasedness)
@@ -71,18 +71,18 @@ model the observed data is most probable. The point in the parameter space that 
 the likelihood function is called the maximum likelihood estimate.
 
 Likelihood function (**L**), for a given model, which is discribed by a probablity
-density function (**p**) depoending on a parameter (**theta**), and data point (**x**)
+density function (**p**) depending on a parameter (**theta**), and data point (**x**)
 is defined as:
   
   **L(theta|x) = p(X=x|theta)**
 
-For several data points an overall likelihood is a porduct of individual.
+For several data points an overall likelihood is a product of individual.
 
 Log-likelihood function is a logarithmic transformation of the likelihood function.
 Because logarithms are strictly increasing functions, maximizing the likelihood 
-is equivalent to maximizing the log-likelihood. As a logrithm of a product is 
+is equivalent to maximizing the log-likelihood. As a logarithm of a product is 
 a sum of logarithm calculations become easy. For a large number of data points
-likelihood is a very small number, and it's logarythm is easy to handle.
+likelihood is a very small number, and it's logarithm is easy to handle.
 
 As the sample size increases to infinity, sequences of maximum 
 likelihood estimators have next properties:
@@ -100,7 +100,7 @@ The problem is that statistical tests (a parameter estimation can be considered 
 of a best hypothesis / model to discribe observed data) generally require knowledge 
 of the probability distribution of the test statistic. This is often a problem for likelihood method, 
 where the probability distribution can be very difficult to determine.
-states says that  for infinite sample size, the distribution of the test statistic 
+states says that for infinite sample size, the distribution of the test statistic 
 **−2log⁡(Λ)**  asymptotically approaches the chi-squared distribution under the null 
 hypothesis. Here, **Λ** denotes the likelihood ratio: **Λ(t,tbest|x) = L(t|x)/L(tbest|x)**.
 If **tbest** is a best parameter, then **Λ** shows how far one can move on **t**-scale
@@ -120,7 +120,7 @@ ostap -b mle_by_hand.py
 ## Chi-squared method
 
 For the case of the large **N**, when the data can be grouped in bins with
-the binning which covers enogh all features of shapes for a signal and a
+the binning which covers enough all features of shapes for a signal and a
 background distributions, a method of the chi-squared minimization could
 be used to obtain parameters of distributions.
 
@@ -128,9 +128,9 @@ The idea of the method is that number of the event in each group (bin)
 follows overall pdf and at the same time follows Poisson statistics.
 As we already mentioned in the limit of large numbers Poisson statistics 
 aproachs Gaussian distribution. The variance of the Poisson random variable 
-is the rendom variable (standard deviation is a square root of it).
+is the random variable (standard deviation is a square root of it).
 So for each set of parameters discribing overall pdf for each bin a
-diviation in values of standard dediations can be calculated.
+diviation in values of standard diviations can be calculated.
 A sum of **n** normally distributed independent random values follows
 well known **chi-squared distribution with (n-1) degrees of freedom**.
 
@@ -139,7 +139,7 @@ See more about [chi-squared distribution](https://en.wikipedia.org/wiki/Chi-squa
 The fitting method is to find a minimum of chi2 in the parameter space.
 
 Chi-squared method allows to calculated a confidense interval for
-parametes from the change of a chi2. See, for example, a statistics 
+parameters from the change of a chi2. See, for example, a statistics 
 part of [Review of Particle Physics](http://pdg.lbl.gov/2018/reviews/rpp2018-rev-statistics.pdf).
 
 ## Fitting in Ostap
@@ -187,7 +187,7 @@ The result of a fit is ** parameter = value± +/- stat.err**.
 
 After performing a fit one have to validate its result. As uncertainties obtained from 
 the fitting routines are statistical, one need a number of data samples that differ 
-within statistical unsertainties. An easeast way to get them, is to generate a random 
+within statistical unsertainties. An easiest way to get them, is to generate a random 
 samples according to parameters of the obtained fit results.
 
 ```python
@@ -240,15 +240,15 @@ ROOT.RooRandom.randomGenerator().SetSeed(int_num)
 
 ### Sideband subtruction
 
-This method exploit an aproach that shape of a bagrouund events under a signal peak
-is the same as outside a peak. One can subtrack the distribution from the distribution
-for the events in the preak region.
+This method exploit an approach that shape of a background events under a signal peak
+is the same as outside a peak. One can subtract the distribution from the distribution
+for the events in the peak region.
 
 Usually **+/-2sigma** around a peak position is used for the signal region and 
-**(-7,-5)sigma** and **(5,7)-sigma*** intervals are used for subtruction.
+**(-7,-5)sigma** and **(5,7)-sigma*** intervals are used for subtraction.
 
 **Important**:
-  - Take care about proper normalisation;
+  - Take care about proper normalization;
   - Background distribution should be quite flat.
 
 ### Fit-in-bin
@@ -261,7 +261,7 @@ This method is quite CPU consuming.
 
 Here, idea is quite simple. Each event in MLE fitting has certain contribution to the
 signal and background part of likelihood function. One can calculate a statistical
-weight for each event with rearkble properties, which allow to use them to detrmine
+weight for each event with remarkable properties, which allow using them to determine
 distribution of a control variable.
 
 **Important:** control variables have to be independent on a discriminating variable(s)!
@@ -285,17 +285,17 @@ print datatset           ## <--- note appearence of new variables
 
 ### Tasks
 
-  1. Create a toy model with fixed parametrs containing peaking signal (30%) and a bakgrounds of two cathegories: peaking (10&) and smooth (40%).
+  1. Create a toy model with fixed parameters containing peaking signal (30%) and a backgrounds of two cathegories: peaking (10&) and smooth (40%).
   2. For the 3000 events find an optimal binning for the chi2 fits
-  3. Compare outcome and performance of the binned chi2 fit and unbinneb maximum likelihood fit for different statistics of:
+  3. Compare outcome and performance of the binned chi2 fit and unbinned maximum likelihood fit for different statistics of:
       - 50 events
       - 3000 events
       - 100000 events
   4. Validate uncertainties of the unbinned maximum likelihood fit for 3000 events.
   5. Compare parameters of the extended and non-extended maximum likelihood fits (50 and 3000 events).
-  6. Add a non-correlated variable with differentr shapes for signal and a backgrounds. 
+  6. Add a non-correlated variable with different shapes for signal and a backgrounds. 
    Try to extract the distribution of the signal for this variable with three methods;
 
 ### Expected outcome
-  * Document in pdf-format containig proper information 
+  * Document in pdf-format containing proper information 
   * Add code into your git repository
