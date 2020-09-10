@@ -1,12 +1,12 @@
 # Setup session
 
-The goal of the session is to introdduec key components, which will be needed for the practice.
+The goal of the session is to introduce key components, which will be needed for the practice.
 
 ## Git
 
 A component of software configuration management, _version control_, also known as _revision control_ or _source control_, is the management of changes to documents, computer programs, large web sites, and other collections of information. 
 
-A _distributed version control_ (also known as _distributed revision control_) is a form of version control in which the complete codebase, including its full history, is mirrored on every developer's computer. Nowdays, [Git](https://en.wikipedia.org/wiki/Git) is _de-facto_ a standatd everyone uses.
+A _distributed version control_ (also known as _distributed revision control_) is a form of version control in which the complete codebase, including its full history, is mirrored on every developer's computer. Nowdays, [Git](https://en.wikipedia.org/wiki/Git) is _de-facto_ a standard everyone uses.
 
 ### Quick start
 
@@ -31,7 +31,7 @@ Typical workflow with the repository you have:
   2. `git add file.py`
   3. `git commit -m "We did that and that"`
 
-The main code 'line' is calles _master_. It contains a code of the project. Anothe branches of the code are also posiible.
+The main code 'line' is calles _master_. It contains a code of the project. Another branches of the code are also possible.
 
 Branches are quite a powerfull concept:
   * `git branch BRANCH_NAME` - to create a new branch, for example, to develope a new feature.
@@ -41,12 +41,12 @@ Branches are quite a powerfull concept:
   * `git branch BRANCH_NAME` - switch back to the branch.
   * `git merge master` - bring changes we made in master into the branch.
   * Change files and commit changes. They will be done in our new branch.
-  * `git checkout master` - switch to master agiain.
+  * `git checkout master` - switch to master again.
   * `git merge master` - bring changes we made in the branch into the master.
   * `git br -d BRANCH_NAME` - remove the branch as the feature we finished to develope is already in the master.
 
 Undo changes:
-  * `git reset --hard HEAD` - undo all local changes. Note, here _HEAD_ is not a variable you need to subsititute (type this command as is)!
+  * `git reset --hard HEAD` - undo all local changes. Note, here _HEAD_ is not a variable you need to substitute (type this command as is)!
   * `git checkout myfile.py` - undo changes in one file.
 
 ### Remote code storage
@@ -79,7 +79,7 @@ This file will be automatically shown in your web-browser. Now, let's turn to a 
 ## Markdown
 
 It's preferable to use [Markdown](https://daringfireball.net/projects/markdown/) to prepare documentation 
-for repositories . As authors say, “Markdown” is two things:
+for repositories. As authors say, “Markdown” is two things:
   1. A plain text formatting syntax;
   2. A software tool, written in Perl, that converts the plain text formatting to HTML.
 We will use the first, as the second is already implemented all over the web. 
@@ -90,7 +90,7 @@ Let's follow github guide to see how easy Markdown formating is:
 ## Basics of statistics
 Here we will discuss:
   * Measurements and uncertainties;
-  * Probability distribution functions and their basic pproperties;
+  * Probability distribution functions and their basic properties;
   * Three special distributions:
     - Binomial
     - Poisson
@@ -105,7 +105,7 @@ Let's follow an introduction lecture by [Prof. Mark Thompson](https://www.hep.ph
 ## Python3
 
 ### Basic statistics with Python3
-In python3 a basic statistics is impemented into a standard library as a special module, which  provides functions for calculating statistics of data, including averages, variance, and standard deviation.
+In python3 a basic statistics is implemented into a standard library as a special module, which provides functions for calculating statistics of data, including averages, variance, and standard deviation.
 
 ```python
 import statistics as stat
@@ -177,8 +177,8 @@ One can use web solution to create and edit LaTeX projects. [Overleaf](https://w
 Create a documentaion about one of special probability density function (requested by a teacher).
 
 ### Expected outcome
-  * Document in pdf-format containig proper information:
-    - A bit of historical overvew
+  * Document in pdf-format containing proper information:
+    - A bit of historical overview
     - PDF, CDF, Moments 
     - Figures of PDF with different parameter set
     - Possible application of this PDF 
