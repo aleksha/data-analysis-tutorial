@@ -23,7 +23,7 @@ Note, that ths software list reflects LBP's stack. Other solutions are also poss
   - Python documantation and tutorals https://docs.python.org/3/ ; 
   - More tutorials https://pythonprogramming.net/ ;
   - Applied Python (in Russian): https://www.youtube.com/watch?v=oLN3-1UX0-A&list=PLrCZzMib1e9qM62lMXC90SiFy7-1-kAPJ&index=1ps://www.youtube.com/watch?v=oLN3-1UX0-A&list=PLrCZzMib1e9qM62lMXC90SiFy7-1-kAPJ&index=1 ;
-  - Algorythms with Python 3 (in Russian): https://www.youtube.com/watch?v=KdZ4HF1SrFs ;
+  - Algorithms with Python 3 (in Russian): https://www.youtube.com/watch?v=KdZ4HF1SrFs ;
   - Practice of programming with Python 3 (in Russian): https://www.youtube.com/watch?v=fgf57Sa5A-A .
 
 ## Practice synopsis
