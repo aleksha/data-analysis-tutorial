@@ -6,16 +6,16 @@
   * Significance
   * Are requirements optimal?
     - Fluctuations
-    - Look elswhere effect
-    - When to use signal for background rejection optimisations?
+    - Look elsewhere effect
+    - When to use signal for background rejection optimizations?
 
 ## Goodness-of-fit
 
 ### Nice pull plots
 
 For large number of events it's good to produce a pull-plots, deviation 
-(in **sqrt(n)**for **n** events in bin) for each bin.  This plot should
-not contain so-called wiggles ofintervalse of large deviation. An example 
+(in **sqrt(n)**for **n** events in bin) for each bin. This plot should
+not contain so-called wiggles of intervals of large deviation. An example 
 of f function, which draw nice plots:
 
 ```python
@@ -101,7 +101,7 @@ def draw_param(r_fit, w_fit, h_fit, N_BINS, var, W_max, name, XTitle, Prefix, Ty
 ### Chi-squared test
 
 The chi2 method uses a statement that for the true model a chi2-value 
-foloows analysitaccly known cho2-distribution. Let's devie a 
+follows analytically known chi2-distribution. Let's devie a 
 **p-value** as a quantile of the chi2-sistribution for the observed chi2.
 Let also choose some significance level **alpha**.
 Three cases are possible:
@@ -109,12 +109,12 @@ Three cases are possible:
  * **p>1-alpha** - model doesn't discribe data
  * overwise model is consuistent with data
 
-For the chi2-fits a minimale chi2 per degrees of freedom shoul be close to unity.
+For the chi2-fits a minimale chi2 per degrees of freedom should be close to unity.
 Quantiles can be found in [Review of Particle Physics](http://pdg.lbl.gov/2018/reviews/rpp2018-rev-statistics.pdf).
 
 ### Toys for MLE
 
-For MLE method a shape of the likelihood distribution isn't known analitically.
+For MLE method a shape of the likelihood distribution isn't known analytically.
 It could be generated using toys:
  - toy samples are generated according fitted model
  - they are re-fitted with the model (at each re-fit a likelihood is computed)
@@ -157,10 +157,10 @@ fom2  = signal.FoM1  ( background , alpha , False ) ## FoM for var>x cut
 
 If you see in your data some unexpected features, think a bit:
  * if it's smaller than your resolution but significant, when 
-  something probably gows wrong
+  something probably goes wrong
  * are the any peaking backgrounds / contributions?
    - miss identified tracks
-   - clones (my favorite Theta+ signal out of K0S-->pi+pi- reqion with clonned pi+ as proton track )
+   - clones (my favorite Theta+ signal out of K0S-->pi+pi- region with clonned pi+ as proton track )
    - different sources of signal (Sigma_c--> Lambda_c pi spectrum at LHCb has clearly visible 
      Lambda_c(2595)-->Sigma_c pi contribution due to limited phase space)
    - feed-downs (see Omega_c* analysis)
@@ -190,16 +190,16 @@ A typical workflow is to use asimulated signal sample and sidebands as a
 background proxy to build a classifier.
 
 Results of the __sPlot__ techiques can be used as a signal proxy, but
-only when signal is known and clearly visible and all its features is undersood. 
+only when signal is known and clearly visible and all its features is understood. 
 One should always remember that the statistical fluctuations will affect such
 studies.
 
 ## Homework
 
 ### Tasks
-  1. For the Lambda_c dataset find an optimar requirements.
-  2. Create a bunch of a thousand toy background only datasets of three variables: one a discriminating and two for selection. Find a dataset with a lagrest gaussian-like fluctuation on a discriminating variable.
-  3. Detrmine a local and a global significance of the "signal".
+  1. For the Lambda_c dataset find an optimal requirements.
+  2. Create a bunch of a thousand toy background only datasets of three variables: one a discriminating and two for selection. Find a dataset with a largest gaussian-like fluctuation on a discriminating variable.
+  3. Determine a local and a global significance of the "signal".
   4. "Optimize" requirements on two control variable to reach a besl local significance.
 
 ### Expected outcome
