@@ -43,21 +43,21 @@ Note, that ths software list reflects LBP's stack. Other solutions are also poss
     * **LaTeX** - to prepare nice scientific reports.
   * **Session 1:** On how to extract a signal.
     * Fitting a signal:
-      - Chi-square and maximum likelyhood fits.
+      - Chi-square and maximum likelihood fits.
       - Extended and non-extended fits.
     * Uncertainty validation using Toy-Monte-Carlo.
     * Distributions for a signal and a background components:
       - Sideband subtruction;
       - Fit-in-bin technique;
       - _sPlot_ unfolding techinque.
-  * **Session 2:** More on fitting + cut-based techique.
+  * **Session 2:** More on fitting + cut-based technique.
     * How good is your fit?
       - Pull distributions;
       - Toys to obtain likelihood distributions;
     * How to find best requirements?
     * Are requirements optimal?
       - Fluctuations
-      - Look elswhere effect
+      - Look elsewhere effect
       - When to use signal for background rejection optimisations?
   * **Session 3:** Simple classification methods
     * Statistical classification
@@ -73,8 +73,8 @@ Note, that ths software list reflects LBP's stack. Other solutions are also poss
     * How to estimate efficiency for not-well reconstructed events?
   * **Session 6:** Regression problem / Fourier transformation
     * Why Fourier transform is needed?
-    * Using SciPyy for FFT
-    * What is is regression?
+    * Using SciPy for FFT
+    * What is regression?
     * Least square and Maximum Likelihood methods
     * Using TMVA to solve regression problem (NN, BTD).
 
