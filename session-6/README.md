@@ -13,7 +13,7 @@ frequencies, such as the expression of a musical chord in terms of the volumes a
 The term Fourier transform refers to both the frequency domain representation and the mathematical operation 
 that associates the frequency domain representation to a function of time. 
 
-We met it alreadu in a Introduction to N&HEP course, when discussing electron scattering on nuclei 
+We met it alreadu in an Introduction to N&HEP course, when discussing electron scattering on nuclei 
 and particles, where a space distribution of charge define features of the electron scattering cross 
 section. See Povh·Rith·Scholz·Zetsche's "Particles and Nuclei" (page 62 and futher).
 
@@ -41,11 +41,11 @@ It's quite a bad term, as can be confused with a
 [regression toward the mean](https://en.wikipedia.org/wiki/Regression_toward_the_mean),
 a "result" of the first paper about regression analysis by John Galton.
 
-We did alredy regression, when were construction classification variables.
+We did already regression, when were construction classification variables.
 
-As physicsts we have try to avoid pure regression and try to understand 
+As physicists we have try to avoid pure regression and try to understand 
 underlying nature of phenomena (see cow example below). But sometimes,
-it's hard to avoid it --- we  have some data and need to evaluate best 
+it's hard to avoid it --- we have some data and need to evaluate best 
 value of other variable out of it. Plus, someone can gives up and go
 to a finance sector, where they care only about money...
 
