@@ -6,7 +6,7 @@
   
 ## Random number generation in ROOT
 
-See [documentetion](https://root.cern.ch/doc/master/classTRandom.html) to
+See [documentation](https://root.cern.ch/doc/master/classTRandom.html) to
 a **TRandom** class family.
 
 One can also have a look on [docs](https://docs.python.org/3/library/random.html) 
@@ -19,9 +19,9 @@ Two aspects to keep in mind:
 
 More delatils in Bohm and Zech book.
 
-## Efficency evalueation
+## Efficiency evaluation
 
-Efficency is the a ratio of numbers for **accepted** and **generated events**.
+Efficiency is the a ratio of numbers for **accepted** and **generated events**.
 However, these are not statistically independent samples.
 The right way is to use independent samples of **accepted** and **rejected events**.
 ```python
@@ -36,8 +36,8 @@ See more on binomial efficencies in [ostap tutorial](https://lhcb.github.io/osta
 
 ## Optimal binning
 
-It is not a rare case when one needs to find the binbing of the histogram that ensures 
-almost equal bin populations. An example is building effciency map on a number of 
+It is not a rare case when one needs to find the binning of the histogram that ensures 
+almost equal bin populations. An example is building efficiency map on a number of 
 accepted events; This task could be solved using **eqaul_bins** method:
 
 ```python
@@ -79,9 +79,9 @@ Here, we follow [official tutorial](https://lhcb.github.io/ostap-tutorials/tools
 
 ## Weighted fit for efficiency evaluation
 
-Sometimes multidimensional efficency map is provided not by a simulation, 
+Sometimes multidimensional efficiency map is provided not by a simulation, 
 but from the data itself (for example, from calibration sample). Nest
-weighted fit procedure can be used to evaluate an efficency:
+weighted fit procedure can be used to evaluate an efficiency:
 ```python
 h_eff  = TH2F(... # efficency map on x and y variables
 
@@ -103,7 +103,7 @@ result_w = model.fitTo( dataset_weighetd, ... )
 result_o = model.fitTo( dataset_original, ... )
 ```
 
-Use original-to-weighted ratio as an efficency for dataset.
+Use original-to-weighted ratio as an efficiency for dataset.
 
 ### Related systematics
 
@@ -125,30 +125,30 @@ H_new_posivive = h_original.sample( accept = lambda s : s > 0 )
 Better to use second way with the requirement that sampled values are positive
 
 ### Important issues
-  * Check that the correlated requrements are the same in the efficency evaluation
+  * Check that the correlated requirements are the same in the efficency evaluation
   * Calculate the uncertainty for extarapolation (events placed outside of the
       efficiency map) by comparing different extrapolation techniques.
-      At least constatnt and linear.
+      At least constant and linear.
 
 
 ## Efficiency and not-well reconstructed events
 
 Even truth-matched (detector hits a done by a generated particle / decay products
 of interest) events can be not well reconstructed. It's good to perform a fit with 
-the full (S+B)-model for them to get a fraction of thruth-matched events.
+the full (S+B)-model for them to get a fraction of truth-matched events.
 
 One can also can conside a fit of the data-like mixture of simulated events
 and background events generated according a model obtained from a fit of
-real data. This give mre precise correction factor.
+real data. This give more precise correction factor.
 
 ## Homework
 
 ### Tasks
-  1. Re-weight an MC dataset to the data for three variables: transverce momentum, rapidity and multiplisity.
-  2. Oprimize a signal selection requirements using re-wighted MC for signal and sidebands for the background.
-  3. Detemine a particle identification efficiency as a function of pseudorapidity and transverse momentum for the dataset and the efficiency map provided by a teacher.
-  4. Estimate signal selection efficency for the B-mesons using MC. Compare results of the naive and accurate estimation.
+  1. Re-weight an MC dataset to the data for three variables: transverce momentum, rapidity and multiplicity.
+  2. Optimize a signal selection requirements using re-wighted MC for signal and sidebands for the background.
+  3. Determine a particle identification efficiency as a function of pseudorapidity and transverse momentum for the dataset and the efficiency map provided by a teacher.
+  4. Estimate signal selection efficiency for the B-mesons using MC. Compare results of the naive and accurate estimation.
 
 ### Expected outcome
-  1. Reaort
+  1. Report
   2. Code
