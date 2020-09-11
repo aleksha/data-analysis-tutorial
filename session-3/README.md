@@ -12,7 +12,7 @@ ML algorithms build a mathematical model based on sample data (training data),
 in order to make predictions or decisions without being explicitly programmed 
 to do so.
 
-ML algorythms could be splited into:
+ML algorithms could be splited into:
   * Supervised learning
   * Unsupervised learning
 Note, that the spliting is not exhausive.
@@ -27,14 +27,14 @@ to correctly determine the output for inputs that were not a part of
 the training data. 
 
 In contrast, **unsupervised learning algorithms** take a set of data that 
-contains only inputs (no labels or upervisory signal). These algorythms find 
+contains only inputs (no labels or supervisory signal). These algorithms find 
 structure in the data, like grouping or clustering of data points. 
-Uunsupervised learning algorithms identify commonalities in the data and react 
+Unsupervised learning algorithms identify commonalities in the data and react 
 based on the presence or absence of such commonalities in each new piece of data. 
 
 
 Now, let's look in general on the problem of **classification**. 
-This is the problem of identifying  to which of a set of categories (sub-populations)
+This is the problem of identifying to which of a set of categories (sub-populations)
 a new observation belongs, on the basis of a training set of data containing 
 observations (or instances) whose category membership is known. 
 We do already touch it, when trying to distinguish between signal and background events.
