@@ -141,6 +141,12 @@ One can also can conside a fit of the data-like mixture of simulated events
 and background events generated according a model obtained from a fit of
 real data. This give mre precise correction factor.
 
+See ***bad.md* (in Russian).
+
+## Bootstrap
+
+See sleides and corresponding ipython-notebooks.
+
 ## Homework
 
 ### Tasks
