@@ -30,6 +30,16 @@ Fourier analysis is used to obtain features of the electronic noise of the TPC.
 Analysis is done using **fft** pack in SciPy:
   * https://docs.scipy.org/doc/scipy/reference/generated/scipy.fftpack.fft.html#scipy.fftpack.fft
 
+### IPython example
+
+First one has to download a data file (`dump.txt`)
+
+```bash
+wget http://adzyuba.web.cern.ch/adzyuba/d/dump.txt
+```
+
+Then, see `FFT.ipynb` on how to remove some noise.
+
 ## Regression analysis
 
 In statistical modeling, **regression analysis** is a set of statistical processes 
