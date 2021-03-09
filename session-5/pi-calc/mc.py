@@ -50,7 +50,7 @@ h_dummy.GetYaxis().SetRangeUser(0,1.2)
 div=4
 for ev in range(1,N):
     x = rand1.Rndm()    
-    y = rand1.Rndm()
+    y = rand2.Rndm()
     if x**2+y**2<=1:
         n_in += 1
         x_in.append( x )
