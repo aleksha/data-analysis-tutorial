@@ -1,5 +1,5 @@
 N = 10000
-M = 5000
+M = 7000
         
 from ostap.histos.graphs import makeGraph, hToGraph, hToGraph2, hToGraph3, lw_graph
 canvas.Close()
