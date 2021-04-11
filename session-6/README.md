@@ -92,3 +92,8 @@ Least square liniear regressions are sensitive to the outliers.
   * Parameter correlated with another "hidden" paramtters 
      (clouds and enemy palane number on successfull bombing)
 
+## Jackknife resampling
+
+The jackknife estimate of a parameter can be found by estimating the parameter for each subsample omitting the _i_-th observation.
+
+See more in example folder.
