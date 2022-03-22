@@ -13,7 +13,7 @@ sig = Models.Voigt_pdf( "sig", xvar=m23, mean=(1.02,1.015,1.025)      ,
 bkg = Models.PS2_pdf("bkg",xvar=m23, m1 = 0.493272, m2=0.493272 )
 
 bw = Ostap.Math.BreitWigner( 1.019 , 0.0042 , 0.493272 , 0.493272 , 1 )
-breit = Models.BreitWigner_pdf ( 'BW' , bw, xvar=m23, mean = (1.019,1.016,1.022),  gamma = 0.0042   )
+breit = Models.BreitWigner_pdf ( 'BW' , bw, xvar=m23, m0 = (1.019,1.016,1.022),  gamma = 0.0042   )
 
 reso = ROOT.RooRealVar("reso","reso",0.001,0.0001,0.003)
 cnv_pdf = Models.Convolution_pdf ( pdf = breit , xvar=m23, resolution = reso , useFFT = True )
