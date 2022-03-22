@@ -7,7 +7,7 @@ m23 = ROOT.RooRealVar( "m23"   ,"m23" , 1.006, 1.065 )
 phi_ds = ds.reduce( ROOT.RooArgSet( im, m23 ), "im>2.24 && im<2.33 && m23>1.006 && m23<1.065" )
 #--- Prepare a composite model
 import ostap.fitting.models as Models
-sig = Models.Voigt_pdf( "sig", xvar=m23, mean=(1.02,1.015,1.025)      ,
+sig = Models.Voigt_pdf( "sig", xvar=m23, m0=(1.02,1.015,1.025)      ,
                                        gamma=(0.0042,0.0004,0.0044) ,
                                        sigma=(0.001,0.0001,0.003)  )
 bkg = Models.PS2_pdf("bkg",xvar=m23, m1 = 0.493272, m2=0.493272 )
