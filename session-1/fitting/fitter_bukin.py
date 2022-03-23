@@ -21,7 +21,7 @@ model  = Models.Fit1D   ( signal = sig_bu , background = bkg0 )
 #-------------------------------------------------------------------------------
 dh = ( ds.reduce( ROOT.RooArgSet( im ) , "im>0" ) ).binnedClone()
 with timing():
-    r, w = model.fitTo( dh )
+    r, w = model.fitTo( dh, draw=True )
 #    r, w = model.fitTo(ds, draw=True, nbins=100, ncpu=4)
 #-------------------------------------------------------------------------------
 print(r)
