@@ -204,6 +204,10 @@ There are several TeX-distributions, which can be used on stand-alone computes. 
 
 One can use web solution to create and edit LaTeX projects. [Overleaf](https://www.overleaf.com/) is a recommended one.
 
+## Inference
+
+Bayesian and frequentists inferences are disussed in `inference\` dir.
+
 ## Homework
 
 ### Task
