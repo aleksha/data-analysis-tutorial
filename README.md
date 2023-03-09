@@ -77,4 +77,7 @@ Note, that ths software list reflects LBP's stack. Other solutions are also poss
     * What is regression?
     * Least square and Maximum Likelihood methods
     * Using TMVA to solve regression problem (NN, BTD).
+  * **Session 7:** Statistical tests
+    * Paired samples
+    * Wilcoxon and t-test
 
