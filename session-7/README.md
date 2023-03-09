@@ -12,6 +12,17 @@ the collected data support a particular hypothesis. Two paradigms are available 
 
 ## Paired samples
 
+A typical task of scientific researcher is to make inference about the question:
+"Does a factor, which is infuencing of a cerain thing make a difference?"
+To answer this question a measurement on a thing is done without and with the factor application.
+These measurements frequently has a digital (or digital-like, for example yes-no) outcomes -- 
+paired variables. Paired samples are samples to make inferences about the differences between 
+two paired variables. 
+
+An example, of such paired samples can be found in files: `WR2023-40yds.txt` and `RB2023-40yds.txt`.
+These are results of 40-yard dash (a sprint covering 40 yards, 36.576 m), which athlets perform.
+The question can be formulated as: "Does athlets tired after their 1st attempt?"
+
 ### Wilcoxon's test
 
 ### Student's t-test
