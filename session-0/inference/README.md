@@ -28,3 +28,15 @@ Check prior influence:
 ```bash
 ostap prior.py
 ```
+## Rule of succession
+
+Answering a question: "f we repeat an experiment that we know can result 
+in a success or failure, **n** times independently, and get **s** successes, 
+and **n−s** failures, then what is the probability that the next repetition 
+will succeed?", Laplace proposed to use **(s+1)/(n+2)** ratio to compute 
+probability.
+
+This is equivalent to the solution of bayesian approach with uniform prior.
+
+For more details see:
+  * https://en.wikipedia.org/wiki/Rule_of_succession
