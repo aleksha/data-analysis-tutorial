@@ -77,18 +77,26 @@ print( epXS(E_e*0.001,t_fixed*0.001*0.001) )
 small = 1.+answer.evalf(subs={ theta:theta_e, E:E_e, M:M_p, s2: 0.00002, s1:0.150})
 large = 1.+answer.evalf(subs={ theta:theta_e, E:E_e, M:M_p, s2: 0.00002, s1:1.500})
 
+small_l = 1.-answer.evalf(subs={ theta:theta_e, E:E_e, M:M_p, s2: 0.00002, s1:0.150})
+large_l = 1.-answer.evalf(subs={ theta:theta_e, E:E_e, M:M_p, s2: 0.00002, s1:1.500})
+
 xx = []; yy = []; zz = [] ; ww=[]
+wwl=[];zzl=[]
 for i in range(100):
     x_val =  0.82+0.001*i
     xx.append( x_val )
     yy.append(  epXS(E_e*0.001,t_fixed*0.001*0.001,x_val))
     ww.append(  epXS(E_e*0.001,small*t_fixed*0.001*0.001,x_val))
     zz.append(  epXS(E_e*0.001,large*t_fixed*0.001*0.001,x_val))
+    wwl.append(  epXS(E_e*0.001,small_l*t_fixed*0.001*0.001,x_val))
+    zzl.append(  epXS(E_e*0.001,large_l*t_fixed*0.001*0.001,x_val))
 
 import matplotlib.pyplot as plt
 plt.plot(yy,xx)
 plt.plot(ww,xx,"g")
 plt.plot(zz,xx,"r")
+plt.plot(wwl,xx,"g")
+plt.plot(zzl,xx,"r")
 plt.grid(True)
 plt.show()
 
