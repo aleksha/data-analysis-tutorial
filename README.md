@@ -51,6 +51,7 @@ Note, that ths software list reflects LBP's stack. Other solutions are also poss
       - Fit-in-bin technique;
       - _sPlot_ unfolding techinque.
   * **Session 2:** More on fitting + cut-based technique.
+    * Are 2D fits important?
     * How good is your fit?
       - Pull distributions;
       - Toys to obtain likelihood distributions;
