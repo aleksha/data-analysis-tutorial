@@ -1,0 +1,29 @@
+# ******************************************************************************
+# Ostap configuration:
+# ******************************************************************************
+[General]
+quiet = False
+verbose = False
+parallel = PATHOS
+
+[Canvas]
+width = 1000
+height = 800
+margintop = 0.05
+marginbottom = 0.12
+marginright = 0.07
+marginleft = 0.12
+
+[Fit Draw]
+
+[Tables]
+
+[RooFit]
+
+[Pathos]
+
+[IPyparallel]
+
+# ******************************************************************************
+# Configuration saved at Wed Aug 16 14:26:03 2023
+# ******************************************************************************
